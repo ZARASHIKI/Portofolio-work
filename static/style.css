@@ -224,15 +224,19 @@ footer {
   transform: rotate(360deg);
 }
 .consul{
-  margin-top: 1rem;
-  padding: 12px 12px; 
+  margin-top: 3rem;
+  padding: 2% 2%; 
   color: #f0f0f0; 
   font-weight: normal; 
   font-family: 'Work Sans', sans-serif; 
   border-radius: 1.5rem; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   border: 1px solid #718096; 
-  width: 22%;
+  width: 26%;
+  transition: 0.5s ease;
+}
+.consul:hover{
+  background-color: #921616;
 }
 body{
   overflow-x: hidden;

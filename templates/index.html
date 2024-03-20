@@ -16,30 +16,30 @@
     <title>portfolio</title>
 </head>
 <script>
-$(document).ready(function(){
-    checkScroll()
-})
-const sections = document.querySelectorAll('.disolve');
+    $(document).ready(function () {
+        checkScroll()
+    })
+    const sections = document.querySelectorAll('.disolve');
 
-function checkScroll() {
-    sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
+    function checkScroll() {
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
 
-        const isSectionInView = (
-            rect.top >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-        );
+            const isSectionInView = (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            );
 
-        if (isSectionInView) {
-            section.classList.add('opacity-100');
-        } else {
-            section.classList.remove('opacity-100');
-        }
-    });
-}
+            if (isSectionInView) {
+                section.classList.add('opacity-100');
+            } else {
+                section.classList.remove('opacity-100');
+            }
+        });
+    }
 
-window.addEventListener('scroll', checkScroll);
-window.addEventListener('resize', checkScroll);
+    window.addEventListener('scroll', checkScroll);
+    window.addEventListener('resize', checkScroll);
 </script>
 
 <body>
@@ -119,14 +119,13 @@ window.addEventListener('resize', checkScroll);
                             With
                             Integrity Since 2017</p>
                         <p class="text-left big_text">NOTARIS & PPAT JAKARTA SELATAN</p>
-                        <p class="flex text-left small2">REZA ZULNIZAR MUKHSIN <img class="ml-2"
+                        <p class="flex text-left mt-4 small2">REZA ZULNIZAR MUKHSIN <img class="ml-2"
                                 src="/static/assets/cheklist.svg" alt=""></p>
                         <div><img class="mt-4" src="/static/assets/Line 1.svg" alt="">
                         </div>
                     </div>
 
-                    <a href="#kontak" class="smth"><button
-                            class="consul hover:bg-primary-red" style="box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.25), 3px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;">CONSULT
+                    <a href="#kontak" class="smth"><button class="consul">CONSULT
                             NOW</button></a>
 
                 </div>
@@ -381,7 +380,8 @@ window.addEventListener('resize', checkScroll);
                             class="form-textarea mt-1 mb-5 block  border-gray-300 shadow-sm" style="width: 90%;"
                             required></textarea>
                     </div>
-                    <button id="submit" type="button" class="bg-all-bg rounded-full text-white px-4 py-2 hover:bg-primary-red " style="width: 90%;box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.25), 3px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+                    <button id="submit" type="button"
+                        class="bg-all-bg rounded-full text-white px-4 py-2 hover:bg-primary-red transition duration-500" style="width: 90%;box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.25), 3px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
                         " onclick="send_email()">Submit</button>
                     <button id="loading" type="button"
                         class="hidden inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-white bg-indigo-500 hover:bg-indigo-400 transition ease-in-out duration-150 cursor-not-allowed"
