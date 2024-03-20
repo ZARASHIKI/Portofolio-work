@@ -1,0 +1,197 @@
+.wraper {
+  z-index: 1001;
+}
+
+#nav-icon1 {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  margin: 50px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span,
+#nav-icon3 span,
+#nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 50%;
+  background: #555453;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+  top: 10px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 20px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 30px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+#mobile-menu {
+  position: fixed;
+  top: 5%;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  transition: right 2.5s ease;
+  z-index: 1000;
+}
+
+#mobile-menu.open {
+  right: 0;
+}
+
+.custom {
+  transform: translate(30%, -80%);
+}
+
+.line {
+  width: 1px;
+  height: 16px;
+  background: linear-gradient(90deg, rgba(95, 95, 95, 0.00) 0%, #5F5F5F 36.5%, #5F5F5F 68%, rgba(95, 95, 95, 0.00) 100%);
+}
+
+.bg-dark-blue {
+  background-color: #1B1D21;
+  border-radius: 43px;
+}
+
+.homesvg {
+  position: absolute;
+  top: -85px;
+  right: -20px;
+}
+
+.small_text {
+  color: var(--Secondary, #F3B86A);
+  font-family: "Work Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  /* 157.143% */
+}
+
+.big_text {
+  color: var(--Text-2, #C1C1C1);
+  font-family: "Lexend Tera";
+  font-size: 47px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.small2 {
+  color: var(--Text-2, #C1C1C1);
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  /* 137.5% */
+}
+
+.service h1 {
+  color: var(--Primary-Red, #921616);
+  text-align: center;
+  font-family: "Lexend Tera";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 1000;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.form h1 {
+  text-align: center;
+  font-family: "Lexend Tera";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.kontak {
+  width: 70%;
+  height: 90vh;
+  border-radius: 8px;
+  background-image: 
+      linear-gradient(95deg, rgba(20, 4, 4, 0.9) 0.55%, rgba(0, 0, 0, 0.7) 98.92%),
+      url('/static/assets/texture.jpeg');
+  background-color: lightgray;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 82px;
+  padding: 15px 325px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background: var(--Container, #1B1D21);
+}
+
+.pt {
+  padding-top: 6rem;
+}
+.dekor2{
+  position: absolute;
+  left: -12%;
+}
+.dekor{
+  padding-top: 18.5rem;
+  fill: linear-gradient(235deg, #727272 -16.13%, rgba(114, 114, 114, 0.00) 69.8%);
+}
