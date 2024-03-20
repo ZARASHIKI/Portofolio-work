@@ -215,3 +215,10 @@ footer {
   top: 50%;
   right: -10%;
 }
+.ellipse4{
+  top: 1%;
+  right: 1%;
+}
+body{
+  overflow-x: hidden;
+}
