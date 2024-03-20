@@ -185,7 +185,7 @@ footer {
 }
 
 .pt {
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 .dekor2{
   position: absolute;
@@ -208,16 +208,31 @@ footer {
   top: 210%;
 }
 .ellipse2{
-  top: 394%;
-  right: -15%;
+  width: 50%;
+  top: 430%;
+  left: 55%;
 }
 .ellipse3{
   top: 50%;
   right: -10%;
 }
 .ellipse4{
-  top: -25%;
-  left: -25%;
+  width: 74%;
+  height: 31%;
+  top: -28%;
+  left: -1%;
+  transform: rotate(360deg);
+}
+.consul{
+  margin-top: 1rem;
+  padding: 12px 12px; 
+  color: #f0f0f0; 
+  font-weight: normal; 
+  font-family: 'Work Sans', sans-serif; 
+  border-radius: 1.5rem; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #718096; 
+  width: 22%;
 }
 body{
   overflow-x: hidden;

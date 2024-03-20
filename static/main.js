@@ -46,6 +46,33 @@ $(document).ready(function() {
       }, 1000);
   });
 });
+
+const sections = document.querySelectorAll('.disolve');
+
+function checkScroll() {
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+
+        const isSectionInView = (
+            rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+
+        if (isSectionInView) {
+            section.classList.add('opacity-100');
+        } else {
+            section.classList.remove('opacity-100');
+        }
+    });
+}
+
+window.addEventListener('scroll', checkScroll);
+window.addEventListener('resize', checkScroll);
+
+
+
+
+
 tailwind.config = {
     theme: {
       extend: {
@@ -56,7 +83,9 @@ tailwind.config = {
           'white':'#D2D2D2',
           'primary-red': 'var(--Primary-Red, #921616)',
         },
-       
+       width:{
+        '40':'45rem'
+       }
       }
     }
   }
