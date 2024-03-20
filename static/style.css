@@ -272,3 +272,34 @@ body{
 .form-input:focus {
   border-color: #0A619F;
 }
+.wa {
+  position: absolute;
+  top: 87%;
+  right: 7%;
+}
+
+.wa:hover .bg-whatappblk {
+  opacity: 0;
+}
+
+.wa:hover .bg-whatappclr {
+  opacity: 1;
+}
+
+.bg-whatappblk,
+.bg-whatappclr {
+  background-image: url(/static/assets/wablack.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  transition: opacity 1.0s ease;
+}
+
+.bg-whatappblk {
+  opacity: 1;
+}
+
+.bg-whatappclr {
+  opacity: 0;
+}

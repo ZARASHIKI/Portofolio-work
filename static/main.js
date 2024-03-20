@@ -54,7 +54,7 @@ tailwind.config = {
       extend: {
         colors: {
           'boxform':'#0A619F',
-          'cardhover':'#414751',
+          'cardhover':'#25282D',
           'skyy':'#0085FF',
           'hover':'#27292F',
           'all-bg': '#0F0F0F',
@@ -66,6 +66,10 @@ tailwind.config = {
        },
        dropShadow:{
         'xl':'0 35px 35px rgba(0,0,0,0)'
+       },
+       backgroundImage:{
+        'whatappblk':"url('/static/assets/wablack.svg')",
+        'whatappclr':"url('/static/assets/wacolor.svg')"
        }
       }
     }
