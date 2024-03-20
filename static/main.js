@@ -50,6 +50,7 @@ tailwind.config = {
     theme: {
       extend: {
         colors: {
+          'skyy':'#0085FF',
           'hover':'#27292F',
           'all-bg': '#0F0F0F',
           'white':'#D2D2D2',

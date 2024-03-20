@@ -192,6 +192,7 @@ footer {
   left: -12%;
 }
 .dekor{
+  right: -30px;
   padding-top: 18.5rem;
   fill: linear-gradient(235deg, #727272 -16.13%, rgba(114, 114, 114, 0.00) 69.8%);
 }
@@ -200,4 +201,17 @@ footer {
 }
 #about{
   height: 140vh;
+}
+
+.ellipse1{
+  left: -10%;
+  top: 210%;
+}
+.ellipse2{
+  top: 394%;
+  right: -15%;
+}
+.ellipse3{
+  top: 50%;
+  right: -10%;
 }
