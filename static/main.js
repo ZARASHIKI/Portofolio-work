@@ -53,6 +53,8 @@ tailwind.config = {
     theme: {
       extend: {
         colors: {
+          'boxform':'#0A619F',
+          'cardhover':'#414751',
           'skyy':'#0085FF',
           'hover':'#27292F',
           'all-bg': '#0F0F0F',
@@ -61,6 +63,9 @@ tailwind.config = {
         },
        width:{
         '40':'45rem'
+       },
+       dropShadow:{
+        'xl':'0 35px 35px rgba(0,0,0,0)'
        }
       }
     }

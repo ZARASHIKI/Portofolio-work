@@ -188,11 +188,13 @@ footer {
   padding-top: 2rem;
 }
 .dekor2{
+  top: 419%;
   position: absolute;
   left: -12%;
 }
 .dekor{
-  right: -3%;
+  z-index: -1;
+  right: -10%;
   padding-top: 18.5rem;
   fill: linear-gradient(235deg, #727272 -16.13%, rgba(114, 114, 114, 0.00) 69.8%);
 }
@@ -251,4 +253,22 @@ body{
 
 .visible {
   opacity: 1;
+}
+.form-input {
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 2px solid #ccc; 
+  transition: border-color 0.3s ease;
+}
+
+.form-input:hover {
+  border-color: #0A619F; 
+}
+
+.form-input:focus {
+  border-color: #0A619F;
 }
