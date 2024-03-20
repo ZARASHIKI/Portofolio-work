@@ -50,6 +50,7 @@ tailwind.config = {
     theme: {
       extend: {
         colors: {
+          'hover':'#27292F',
           'all-bg': '#0F0F0F',
           'white':'#D2D2D2',
           'primary-red': 'var(--Primary-Red, #921616)',

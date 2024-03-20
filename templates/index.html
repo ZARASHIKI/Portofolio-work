@@ -22,84 +22,89 @@
 
 <body>
     <div class="hidden md:block">
-    <div class="flex justify-center">
-        <nav class="bg-dark-blue fixed w-2/5 top-5 z-50 ">
-            <div class="mx-auto px-2 ">
-                <div class="relative flex items-center justify-center h-16">
-                    <div class="flex-shrink-0 flex items-center mr-4">
-                        <img class="block lg:hidden h-8 w-auto" src="/static/assets/logo.png" alt="Logo">
-                        <img class="hidden lg:block h-8 w-auto" src="/static/assets/logo.png" alt="Logo">
-                    </div>
-                    <div class="line hidden lg:block"></div>
-                    <div class="hidden lg:block">
-                        <div class="flex items-baseline space-x-4">
-                            <a href="#home"
-                                class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium smth">Home</a>
-                            <a href="#services"
-                                class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium smth">Services</a>
-                            <a href="#about"
-                                class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium smth">About</a>
+        <div class="flex justify-center">
+            <nav class="bg-dark-blue fixed w-2/4 top-5 z-50 shadow-lg ">
+                <div class="mx-auto px-2 ">
+                    <div class="relative flex items-center justify-center h-16">
+                        <div class="flex-shrink-0 flex items-center mr-4">
+                            <img class="block lg:hidden h-8 w-auto" src="/static/assets/Logo White.png" alt="Logo">
+                            <a href="/"><img class="hidden lg:block h-20 w-auto" src="/static/assets/Logo White.png" alt="Logo"></a>
+                            
+                        </div>
+                        <div class="line hidden lg:block mr-2"></div>
+                        <div class="hidden lg:block">
+                            <div class="flex items-baseline space-x-4">
+                                <a href="#home"
+                                    class="text-white hover:bg-hover px-1 py-2 rounded-md text-sm font-medium smth">Home</a>
+                                <a href="#services"
+                                    class="text-white hover:bg-hover px-1 py-2 rounded-md text-sm font-medium smth">Services</a>
+                                <a href="#about"
+                                    class="text-white hover:bg-hover px-1 py-2 rounded-md text-sm font-medium smth">About</a>
 
-                            <a href="#vision"
-                                class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium smth">Our
-                                Vision</a>
-                            <a href="#testi"
-                                class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium smth">Testimonial</a>
+                                <a href="#vision"
+                                    class="text-white hover:bg-hover px-1 py-2 rounded-md text-sm font-medium smth">Our
+                                    Vision</a>
+                                <a href="#testi"
+                                    class="text-white hover:bg-hover px-1 py-2 rounded-md text-sm font-medium smth">Testimonial</a>
+                            </div>
+                        </div>
+                        <div class="line hidden lg:block mr-4 ml-4"></div>
+                        <a href="#kontak" class="hidden lg:block h-8 w-auto smth"><img
+                            src="/static/assets/booking.png" alt=""></a>
+                        <!-- Mobile Mode Button -->
+                        <div class="absolute inset-y-0 custom right-0 wrapper lg:hidden">
+                            <button class="p-2 " aria-expanded="true" onclick="toggleMenu()" id="nav-icon1">
+                                <div>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
                         </div>
                     </div>
-                    <div class="line hidden lg:block"></div>
-                    <!-- Mobile Mode Button -->
-                    <div class="absolute inset-y-0 custom right-0 wrapper lg:hidden">
-                        <button class="p-2 " aria-expanded="true" onclick="toggleMenu()" id="nav-icon1">
-                            <div>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </button>
+                </div>
+
+                <!-- Mobile Mode Links -->
+                <div class="hidden lg:hidden " id="mobile-menu">
+                    <div class="px-2 pt-2 pb-3 space-y-1">
+                        <a href="#home"
+                            class="text-black block px-3 py-2 rounded-md text-base font-medium smth">Home</a>
+                        <a href="#services"
+                            class="text-black-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium smth">Services</a>
+                        <a href="#about"
+                            class="text-black-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium smth">About</a>
+                        <a href="#"
+                            class="text-black-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium smth">Our
+                            Vision</a>
+                        <a href="#"
+                            class="text-black-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                            smth>Testimonial</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <section id="home"
+            class="overflow-y-hidden h-screen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg flex items-center">
+            <div>
+                <img class="absolute -top-10 right-0 -mt-20" src="/static/assets/Group 5.svg" alt="">
+            </div>
+            <div class="flex items-center justify-center mt-6">
+                <div class="text-center w-2/3">
+                    <p class="flex text-left small_text "><img class="mr-2 w-4" src="/static/assets/Like.svg">
+                        Notarizing
+                        With
+                        Integrity Since 2017</p>
+                    <p class="text-left big_text">NOTARIS & PPAT JAKARTA SELATAN</p>
+                    <p class="flex text-left small2">REZA ZULNIZAR MUKHSIN <img class="ml-2"
+                            src="/static/assets/cheklist.svg" alt=""></p>
+                    <div><img class="mt-4" src="/static/assets/Line 1.svg" alt="">
+                        <a href="#kontak" class="flex mr-4 smth" style="margin-left: -2%;"><img
+                                src="/static/assets/button.svg" alt=""></a>
                     </div>
                 </div>
             </div>
-
-            <!-- Mobile Mode Links -->
-            <div class="hidden lg:hidden " id="mobile-menu">
-                <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="#home" class="text-black block px-3 py-2 rounded-md text-base font-medium smth">Home</a>
-                    <a href="#services"
-                        class="text-black-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium smth">Services</a>
-                    <a href="#about"
-                        class="text-black-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium smth">About</a>
-                    <a href="#"
-                        class="text-black-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium smth">Our
-                        Vision</a>
-                    <a href="#"
-                        class="text-black-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                        smth>Testimonial</a>
-                </div>
-            </div>
-        </nav>
+            <img class="h-2/3" style="width: 50%; margin-top:5%" src="/static/assets/Photo.svg" alt="Profile">
     </div>
-    <section id="home"
-        class="overflow-y-hidden h-screen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg flex items-center">
-        <div>
-            <img class="absolute -top-10 right-0 -mt-20" src="/static/assets/Group 5.svg" alt="">
-        </div>
-        <div class="flex items-center justify-center mt-6">
-            <div class="text-center w-2/3">
-                <p class="flex text-left small_text "><img class="mr-2 w-4" src="/static/assets/Like.svg"> Notarizing
-                    With
-                    Integrity Since 2017</p>
-                <p class="text-left big_text">NOTARIS & PPAT JAKARTA SELATAN</p>
-                <p class="flex text-left small2">REZA ZULNIZAR MUKHSIN <img class="ml-2"
-                        src="/static/assets/cheklist.svg" alt=""></p>
-                <div><img class="mt-4" src="/static/assets/Line 1.svg" alt="">
-                    <a href="#kontak" class="flex mr-4 smth" style="margin-left: -2%;"><img src="/static/assets/button.svg"
-                            alt=""></a>
-                </div>
-            </div>
-        </div>
-        <img class="h-2/3" style="width: 50%; margin-top:5%" src="/static/assets/Photo.svg" alt="Profile">
-        </div>
     </section>
 
     <section id="services" class="overflow-y-block h-screen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
@@ -183,11 +188,11 @@
             </div>
         </div>
     </section>
-    <section id="about" class=" h-full bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
+    <section id="about" class=" h-screen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
         <div class="parallax-content relative z-10 flex flex-col items-center justify-center py-20 text-white service">
             <h1 class="mt-6 text-4xl font-bold">About Our Notary Agency</h1>
             <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
-            <p class="mt-2">Kantor Notaris dan PPAT Reza Zulnizar Mukhsin, SH, MKn. didirikan pada tahun 2017 di
+            <p class="mt-8">Kantor Notaris dan PPAT Reza Zulnizar Mukhsin, SH, MKn. didirikan pada tahun 2017 di
                 kabupaten karawang.</p>
             <p>Setelah berpengalaman di bidang kenotariatan dan PPAT, juga bermitra dengan ratusan client perorangan,
                 instansi, dan perusahaan lokal</p>
@@ -213,7 +218,7 @@
         <div class="parallax-content relative z-10 flex flex-col items-center justify-center py-20 text-white service">
             <h1 class="mt-6 text-4xl font-bold">WHAT OUR CLIENTS SAY</h1>
             <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
-            <p class="mt-5">See what our past customers have said about our convenient, honest, and</p>
+            <p class="mt-8">See what our past customers have said about our convenient, honest, and</p>
             <p>professional notary services. We have helped clients from individuals to major</p>
             <p>corporations.</p>
         </div>
@@ -284,7 +289,7 @@
         <div class="parallax-content relative z-10 flex flex-col items-center justify-center py-20 text-white service">
             <h1 class="mt-6 text-4xl font-bold">BANK PARTNERSHIP</h1>
             <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
-            <img class="mt-4" src="/static/assets/Partners.png" alt="">
+            <img class="mt-8" src="/static/assets/Partners.png" alt="">
 
         </div>
     </section>
@@ -333,10 +338,8 @@
                             class="form-textarea mt-1 mb-5 block  border-gray-300 shadow-sm" style="width: 90%;"
                             required></textarea>
                     </div>
-                    <button id="submit" type="button"
-                        class="bg-primary-red rounded-full text-white px-4 py-2" style="width: 90%;box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.25), 3px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-                        "
-                        onclick="send_email()">Submit</button>
+                    <button id="submit" type="button" class="bg-primary-red rounded-full text-white px-4 py-2" style="width: 90%;box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.25), 3px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+                        " onclick="send_email()">Submit</button>
                     <button id="loading" type="button"
                         class="hidden inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-white bg-indigo-500 hover:bg-indigo-400 transition ease-in-out duration-150 cursor-not-allowed"
                         disabled>
@@ -352,13 +355,13 @@
                     </button>
                 </div>
             </div>
-            <a class="smth" href="#home"><img src="/static/assets/Scroll To Top.png" alt=""></a>
+            <a class="smth pt-20" href="#home"><img src="/static/assets/Scroll To Top.png" alt=""></a>
         </div>
     </section>
 
-<footer></footer>
-</div>
-<div class="block md:hidden"></div>
+    <footer></footer>
+    </div>
+    <div class="block md:hidden"></div>
 </body>
 
 </html>

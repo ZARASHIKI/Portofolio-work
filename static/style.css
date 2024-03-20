@@ -185,7 +185,7 @@ footer {
 }
 
 .pt {
-  padding-top: 6rem;
+  padding-top: 5rem;
 }
 .dekor2{
   position: absolute;
@@ -194,4 +194,10 @@ footer {
 .dekor{
   padding-top: 18.5rem;
   fill: linear-gradient(235deg, #727272 -16.13%, rgba(114, 114, 114, 0.00) 69.8%);
+}
+#services{
+  height: 120vh;
+}
+#about{
+  height: 140vh;
 }
