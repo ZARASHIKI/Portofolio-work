@@ -16,30 +16,29 @@
     <title>portfolio</title>
 </head>
 <script>
-    $(document).ready(function () {
-        checkScroll()
-    })
-    const sections = document.querySelectorAll('.disolve');
-
-    function checkScroll() {
-        sections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-
-            const isSectionInView = (
-                rect.top >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-            );
-
-            if (isSectionInView) {
-                section.classList.add('opacity-100');
+    $(document).ready(function() {
+        $(window).scroll(function() {
+          $('.item').each(function() {
+            var windowHeight = $(window).height();
+            var windowTopPosition = $(window).scrollTop();
+            var windowBottomPosition = (windowTopPosition + windowHeight);
+            var itemTopPosition = $(this).offset().top;
+            var itemBottomPosition = (itemTopPosition + $(this).outerHeight());
+      
+            // Check if item is within viewport
+            if ((itemBottomPosition >= windowTopPosition) && (itemTopPosition <= windowBottomPosition)) {
+              $(this).addClass('visible');
             } else {
-                section.classList.remove('opacity-100');
+              $(this).removeClass('visible');
             }
+          });
         });
-    }
-
-    window.addEventListener('scroll', checkScroll);
-    window.addEventListener('resize', checkScroll);
+      
+        // Check visibility on page load
+        $(window).scroll();
+      });
+      
+      
 </script>
 
 <body>
@@ -135,9 +134,9 @@
     </section>
 
     <section id="services" class="overflow-y-block h-screen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
-        <div class="">
             <img class="absolute -bottom-60 -left-40 " src="/static/assets/Group 5.svg" alt="">
             <img class="absolute ellipse3" src="/static/assets/blur2.png" alt="">
+            <div class="item">
             <div
                 class="parallax-content relative z-10 flex flex-col items-center justify-center py-20 text-white service ">
                 <h1 class="mt-6 text-4xl font-bold">OUR SERVICES</h1>
@@ -226,8 +225,10 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
     <section id="about" class=" h-screen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
+        <div class="item">
         <div class="parallax-content relative z-10 flex flex-col items-center justify-center py-20 text-white service">
             <h1 class="mt-6 text-4xl font-bold">About Our Notary Agency</h1>
             <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
@@ -240,10 +241,12 @@
 
         </div>
         <img class="mx-auto shadow-md" src="/static/assets/about.png" alt="">
+    </div>
     </section>
 
     <section id="vision" class="h-screeen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
         <img class="absolute  ellipse1" src="/static/assets/blur1.png" alt="">
+        <div class="item">
         <div class="parallax-content relative z-10 flex flex-col items-center justify-center py-20 text-white service">
             <h1 class="mt-6 text-4xl font-bold">OUR VISION & MISSION</h1>
             <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
@@ -325,8 +328,10 @@
                     class="mx-auto" src="/static/assets/Arrow 2.svg" alt=""></button>
 
         </div>
+    </div>
     </section>
     <section id="bank" class="overflow-y-hidden bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
+        <div class="item">
         <div class="parallax-content relative z-10 flex flex-col items-center justify-center py-20 text-white service">
             <h1 class="mt-6 text-4xl font-bold">BANK PARTNERSHIP</h1>
             <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
@@ -334,9 +339,11 @@
 
         </div>
         </div>
+    </div>
     </section>
 
     <section id="kontak" class="overflow-y-hidden pt h-full bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg ">
+        <div class="item">
         <div class="flex flex-wrap justify-center items-center">
             <div class="flex kontak">
                 <div
@@ -398,6 +405,7 @@
                     </button>
                 </div>
             </div>
+        </div>
             <a class="smth pt-20" href="#home"><img src="/static/assets/Scroll To Top.png" alt=""></a>
         </div>
     </section>

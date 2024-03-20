@@ -244,3 +244,11 @@ footer {
 body{
   overflow-x: hidden;
 }
+.item {
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.visible {
+  opacity: 1;
+}
