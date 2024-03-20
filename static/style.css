@@ -192,7 +192,7 @@ footer {
   left: -12%;
 }
 .dekor{
-  right: -30px;
+  right: -3%;
   padding-top: 18.5rem;
   fill: linear-gradient(235deg, #727272 -16.13%, rgba(114, 114, 114, 0.00) 69.8%);
 }
@@ -237,6 +237,9 @@ footer {
 }
 .consul:hover{
   background-color: #921616;
+}
+.h-screeen{
+  height: 85vh;
 }
 body{
   overflow-x: hidden;
