@@ -27,9 +27,6 @@ function send_email() {
         success: function (response) {
             submitButton.removeClass('hidden');
             loadingButton.addClass('hidden');
-    
-
-
             alert("Thank you for your message. We will get back to you soon!")
             window.location.replace("/")
         },
@@ -64,9 +61,9 @@ tailwind.config = {
        width:{
         '40':'45rem'
        },
-       dropShadow:{
-        'xl':'0 35px 35px rgba(0,0,0,0)'
-       },
+       boxShadow: {
+        'custom-xl': '0 25px 50px -12px rgba(0, 0, 0, 0.75)',
+      },
        backgroundImage:{
         'whatappblk':"url('/static/assets/wablack.svg')",
         'whatappclr':"url('/static/assets/wacolor.svg')"
