@@ -216,8 +216,8 @@ footer {
   right: -10%;
 }
 .ellipse4{
-  top: 1%;
-  right: 1%;
+  top: -25%;
+  left: -25%;
 }
 body{
   overflow-x: hidden;
