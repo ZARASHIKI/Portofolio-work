@@ -314,7 +314,7 @@ body{
 .big_textm {
   color: var(--Text-2, #C1C1C1);
   font-family: "Lexend Tera";
-  font-size: 25px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -324,7 +324,7 @@ body{
 .small2m {
   color: var(--Text-2, #C1C1C1);
   font-family: "Work Sans";
-  font-size: 15px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 22px;
