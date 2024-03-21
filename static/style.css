@@ -25,7 +25,7 @@
   position: absolute;
   height: 4px;
   width: 50%;
-  background: #555453;
+  background: #F4F4F4;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -44,7 +44,10 @@
 }
 
 #nav-icon1 span:nth-child(2) {
+   width: 20px; /* Decrease width */
   top: 20px;
+  left: 13%; /* Adjust left position */
+
 }
 
 #nav-icon1 span:nth-child(3) {
@@ -74,12 +77,12 @@
 
 #mobile-menu {
   position: fixed;
-  top: 5%;
+  top: 0;
   width: 250px;
   height: 100%;
-  background-color: #fff;
+  background-color: #1B1D21;
   transition: right 2.5s ease;
-  z-index: 1000;
+  z-index: 0;
 }
 
 #mobile-menu.open {
@@ -296,4 +299,78 @@ body{
 
 .bg-whatappclr {
   opacity: 0;
+}
+
+.small_textm {
+  color: var(--Secondary, #F3B86A);
+  font-family: "Work Sans";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  /* 157.143% */
+}
+
+.big_textm {
+  color: var(--Text-2, #C1C1C1);
+  font-family: "Lexend Tera";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.small2m {
+  color: var(--Text-2, #C1C1C1);
+  font-family: "Work Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  /* 137.5% */
+}
+.chekm{
+  top:17.3rem;
+}
+.my-slide{
+  display: none;
+}
+
+.fade {
+  animation-name: slideInOut;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  opacity: 0; /* Mulai dengan opasitas 0 */
+}
+
+@keyframes slideInOut {
+  0%, 8.333% { /* Start moving immediately, reach the midpoint quickly */
+    transform: translateX(100%);
+    opacity: 0; /* Opacity 0 saat animasi dimulai */
+  }
+  16.666% { /* End of initial movement, start of pause */
+    transform: translateX(0%);
+    opacity: 1; /* Opacity 1 saat slide mulai terlihat */
+  }
+  50% { /* Pause */
+    transform: translateX(0%);
+    opacity: 1; /* Tetap pada opasitas 1 selama berhenti */
+  }
+  66.666% { /* Resume movement */
+    transform: translateX(0%);
+    opacity: 1; /* Tetap pada opasitas 1 saat animasi berlanjut */
+  }
+  83.333%, 100% { /* Move to the left */
+    transform: translateX(-100%);
+    opacity: 0; /* Tetap pada opasitas 1 saat animasi selesai */
+  }
+}
+
+
+
+.dot{
+transition: background-color 1.2s ease;
 }

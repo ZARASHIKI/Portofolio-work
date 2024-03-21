@@ -16,39 +16,16 @@
     <title>portfolio</title>
 </head>
 <script>
-    $(document).ready(function () {
-        $(window).scroll(function () {
-            $('.item').each(function () {
-                var windowHeight = $(window).height();
-                var windowTopPosition = $(window).scrollTop();
-                var windowBottomPosition = (windowTopPosition + windowHeight);
-                var itemTopPosition = $(this).offset().top;
-                var itemBottomPosition = (itemTopPosition + $(this).outerHeight());
-
-                // Check if item is within viewport
-                if ((itemBottomPosition >= windowTopPosition) && (itemTopPosition <= windowBottomPosition)) {
-                    $(this).addClass('visible');
-                } else {
-                    $(this).removeClass('visible');
-                }
-            });
-        });
-
-        // Check visibility on page load
-        $(window).scroll();
-    });
-
-
+    
 </script>
 
 <body>
-    <div class="hidden md:block screen-all">
+    <div class="hidden lg:block">
         <div class="flex justify-center">
             <nav class="bg-dark-blue fixed w-40 top-5 z-50 shadow-custom-xl ">
                 <div class="mx-auto px-2 ">
                     <div class="relative flex items-center justify-center h-16">
                         <div class="flex-shrink-0 flex items-center mr-4">
-                            <img class="block lg:hidden h-8 w-auto" src="/static/assets/Logo White.png" alt="Logo">
                             <a href="/"><img class="hidden lg:block h-20 w-auto" src="/static/assets/Logo White.png"
                                     alt="Logo"></a>
                         </div>
@@ -72,38 +49,10 @@
                         <div class="line hidden lg:block mr-4 ml-4"></div>
                         <a href="#kontak" class="hidden lg:block h-8 w-auto smth"><img src="/static/assets/booking.png"
                                 alt=""></a>
-                        <!-- Mobile Mode Button -->
-                        <div class="absolute inset-y-0 custom right-0 wrapper lg:hidden">
-                            <button class="p-2 " aria-expanded="true" onclick="toggleMenu()" id="nav-icon1">
-                                <div>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </button>
-                        </div>
                     </div>
-                </div>
-
-                <!-- Mobile Mode Links -->
-                <div class="hidden lg:hidden " id="mobile-menu">
-                    <div class="px-2 pt-2 pb-3 space-y-1">
-                        <a href="#home"
-                            class="text-black block px-3 py-2 rounded-md text-base font-medium smth">Home</a>
-                        <a href="#services"
-                            class="text-black-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium smth">Services</a>
-                        <a href="#about"
-                            class="text-black-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium smth">About</a>
-                        <a href="#"
-                            class="text-black-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium smth">Our
-                            Vision</a>
-                        <a href="#"
-                            class="text-black-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                            smth>Testimonial</a>
-                    </div>
-                </div>
             </nav>
         </div>
+
         <section id="home"
             class="overflow-y-hidden h-screen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg flex items-center">
             <div>
@@ -139,343 +88,620 @@
             </a>
             <img class="h-2/3" style="width: 50%; margin-top:5%" src="/static/assets/Photo.svg" alt="Profile">
     </div>
+    </div>
     </section>
-
-    <section id="services" class="overflow-y-block h-screen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
-        <img class="absolute -bottom-60 -left-40 " src="/static/assets/Group 5.svg" alt="">
-        <img class="absolute ellipse3" src="/static/assets/blur2.png" alt="">
-        <div class="item">
-            <div
-                class="parallax-content relative z-10 flex flex-col items-center justify-center py-20 text-white service ">
-                <h1 class="mt-6 text-4xl font-bold">OUR SERVICES</h1>
-                <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
-                <p class="mt-2">Our expert notaries properly validate and notarize your paperwork to make sure it
-                <p>meets legal standards.</p>
-                </p>
-            </div>
-
-            <div class="grid grid-cols-2 w-1/2 gap-y-8 gap-x-8 ml-auto mr-auto -mt-8">
+    </div>
+    <div class="hidden lg:block">
+        <section id="services" class="overflow-y-block h-screen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
+            <img class="absolute -bottom-60 -left-40 " src="/static/assets/Group 5.svg" alt="">
+            <img class="absolute ellipse3" src="/static/assets/blur2.png" alt="">
+            <div class="item">
                 <div
-                    class="h-71 z-20 px-24 py-5 bg-zinc-900 rounded shadow-xl border border-gray-700 flex-col justify-center items-center gap-2.5 inline-flex hover:bg-cardhover">
-                    <div class="flex-col justify-start items-center gap-8 flex">
-                        <div class="w-9 h-9 p-0.5 justify-center items-center inline-flex">
-                            <div class="w-7 h-7 relative">
-                                <img src="/static/assets/home.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="flex-col justify-start items-center gap-4 flex">
-                            <div
-                                class="self-stretch text-center text-neutral-300 text-2xl font-semibold font-work-sans">
-                                Pendirian & Pengurusan Perusahaan</div>
-                            <div
-                                class="w-72 text-center text-neutral-300 text-sm font-normal font-work-sans leading-snug">
-                                Pendirian badan hukum (PT, CV, Yayasan dan Perkumpulan)</div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="w-100 h-72 z-20 px-24 py-5 bg-zinc-900 rounded shadow-xl border border-gray-700 flex-col justify-center items-center gap-2.5 inline-flex hover:bg-cardhover">
-                    <div class="flex-col justify-start items-center gap-8 flex">
-                        <div class="w-9 h-9 p-0.5 justify-center items-center inline-flex">
-                            <div class="w-7 h-7 relative">
-                                <img src="/static/assets/home.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="flex-col justify-start items-center gap-4 flex">
-                            <div
-                                class="self-stretch text-center text-neutral-300 text-2xl font-semibold font-work-sans">
-                                Transaksi Keuangan <br />& Kredit</div>
-                            <div
-                                class="w-72 text-center text-neutral-300 text-sm font-normal font-work-sans leading-snug">
-                                Akta Perjanjian Kredit, & Akta Perjanjian Hutang</div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="w-100 h-72 z-20 px-24 py-5 bg-zinc-900 rounded shadow-xl border border-gray-700 flex-col justify-center items-center gap-2.5 inline-flex hover:bg-cardhover">
-                    <div class="flex-col justify-start items-center gap-8 flex">
-                        <div class="w-9 h-9 p-0.5 justify-center items-center inline-flex">
-                            <div class="w-7 h-7 relative">
-                                <img src="/static/assets/home.svg" alt="">
-
-                            </div>
-                        </div>
-                        <div class="flex-col justify-start items-center gap-4 flex">
-                            <div
-                                class="self-stretch text-center text-neutral-300 text-2xl font-semibold font-work-sans">
-                                Transaksi Properti</div>
-                            <div
-                                class="w-72 text-center text-neutral-300 text-sm font-normal font-work-sans leading-snug">
-                                Akta Sewa Menyewa, Akta Jual Beli, Akta Hibah, Akta Tukar Menukar, Akta Pemasukan Dalam
-                                Perusahaan/Inbreng</div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="w-100 h-72 z-20 px-24 py-5 bg-zinc-900 rounded shadow-xl border border-gray-700 flex-col justify-center items-center gap-2.5 inline-flex hover:bg-cardhover">
-                    <div class="flex-col justify-start items-center gap-8 flex">
-                        <div class="w-9 h-9 p-0.5 justify-center items-center inline-flex">
-                            <div class="w-7 h-7 relative">
-                                <img src="/static/assets/home.svg" alt="">
-
-                            </div>
-                        </div>
-                        <div class="flex-col justify-start items-center gap-4 flex">
-                            <div
-                                class="self-stretch text-center text-neutral-300 text-2xl font-semibold font-work-sans">
-                                Hak Kepemilikan</div>
-                            <div
-                                class="w-72 text-center text-neutral-300 text-sm font-normal font-work-sans leading-snug">
-                                Akta Pembagian Hak Bersama, Akta Hak Guna Bangunan di Atas Tanah Hak Milik, Akta
-                                Pemberian
-                                Hak Pakai di Atas Tanah Hak Milik, Akta Pemberian Hak Tanggungan </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="about" class=" h-screen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
-        <div class="item">
-            <div
-                class="parallax-content relative z-10 flex flex-col items-center justify-center py-20 text-white service">
-                <h1 class="mt-6 text-4xl font-bold">About Our Notary Agency</h1>
-                <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
-                <p class="mt-8">Kantor Notaris dan PPAT Reza Zulnizar Mukhsin, SH, MKn. didirikan pada tahun 2017 di
-                    kabupaten karawang.</p>
-                <p>Setelah berpengalaman di bidang kenotariatan dan PPAT, juga bermitra dengan ratusan client
-                    perorangan,
-                    instansi, dan perusahaan lokal</p>
-                <p>maupun asing. Pada tahun 2023 Kantor Notaris dan PPAT Reza Zulnizar
-                    Mukhsin, SH, M.Kn pindah di Jakarta Selatan sampai dengan sekarang.</p>
-
-            </div>
-            <img class="mx-auto shadow-custom-xl" src="/static/assets/about.png" alt="">
-        </div>
-    </section>
-
-    <section id="vision" class="h-screeen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
-        <img class="absolute  ellipse1" src="/static/assets/blur1.png" alt="">
-        <div class="item">
-            <div
-                class="parallax-content relative z-10 flex flex-col items-center justify-center py-20 text-white service">
-                <h1 class="mt-6 text-4xl font-bold">OUR VISION & MISSION</h1>
-                <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
-                <p class="mt-12">Pelayanan yang terbaik demi legalitas para pihak dengan</p>
-                <p>amanah dan berintegritas.</p>
-                <div
-                    class="w-1/2 h-14 mt-8 p-4 bg-zinc-900 rounded-3xl border-2 border-gray-700 flex-col justify-center items-start gap-2.5 inline-flex hover:bg-cardhover">
-                    <div class="self-stretch justify-start items-center gap-3 inline-flex">
-                        <div class="flex-col justify-start items-center inline-flex">
-                            <img src="/static/assets/visi01.png" alt="">
-                        </div>
-                        <div class="grow shrink basis-0 flex-col justify-start items-start gap-2.5 inline-flex">
-                            <div class="self-stretch text-neutral-300 text-xl font-normal font-Work Sans">Memberikan
-                                pelayanan dengan kualitas yang terbaik kepada mitra</div>
-                        </div>
-                    </div>
+                    class="parallax-content relative z-10 flex flex-col items-center justify-center py-20 text-white service ">
+                    <h1 class="mt-6 text-4xl font-bold">OUR SERVICES</h1>
+                    <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
+                    <p class="mt-2">Our expert notaries properly validate and notarize your paperwork to make sure it
+                    <p>meets legal standards.</p>
+                    </p>
                 </div>
 
-                <div
-                    class="w-1/2 h-14 mt-8 p-4 bg-zinc-900 rounded-3xl border-2 border-gray-700 flex-col justify-center items-start gap-2.5 inline-flex hover:bg-cardhover">
-                    <div class="self-stretch justify-start items-center gap-3 inline-flex">
-                        <div class="flex-col justify-start items-center inline-flex">
-                            <img src="/static/assets/visi02.png" alt="">
-                        </div>
-                        <div class="grow shrink basis-0 flex-col justify-start items-start gap-2.5 inline-flex">
-                            <div class="self-stretch text-neutral-300 text-xl font-normal font-Work Sans">Menjalin
-                                komunikasi yang harmonis dengan mitra</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="w-1/2 h-20 mt-8 p-4 bg-zinc-900 rounded-3xl border-2 border-gray-700 flex-col justify-center items-start gap-2.5 inline-flex hover:bg-cardhover">
-                    <div class="self-stretch justify-start items-center gap-3 inline-flex">
-                        <div class="flex-col justify-start items-center inline-flex">
-                            <img src="/static/assets/visi03.png" alt="">
-                        </div>
-                        <div class="grow shrink basis-0 flex-col justify-start items-start gap-2.5 inline-flex">
-                            <div class="self-stretch text-neutral-300 text-xl font-normal font-Work Sans">Memberikan
-                                edukasi dan literasi terkait kenotarian dan bidang hukum secara transparan dan
-                                bertanggung jawab kepada mitra & masyarakat</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-    </section>
-    <img class="dekor2" src="/static/assets/Group 5.svg" alt="">
-    <img class="absolute z-0 dekor" src="/static/assets/dekor.png" alt="">
-    <img class="absolute z-0 ellipse2" src="/static/assets/blur2.png" alt="">
-    <section id="testi" class="overflow-y-hidden h-screen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
-        <div class="parallax-content relative flex flex-col items-center justify-center py-20 text-white service">
-            <h1 class="mt-6 text-4xl font-bold">WHAT OUR CLIENTS SAY</h1>
-            <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
-            <p class="mt-8">See what our past customers have said about our convenient, honest, and</p>
-            <p>professional notary services. We have helped clients from individuals to major</p>
-            <p>corporations.</p>
-        </div>
-        <div class="flex justify-center gap-x-8  ml-auto mr-auto -mt-8">
-            <div
-                class="w-96 h-80 z-20 p-7 bg-zinc-900 rounded shadow-custom-xl border border-gray-700 flex flex-col justify-center items-center gap-2.5 hover:bg-cardhover">
-                <div class="flex items-center gap-2.5">
-                    <div class="w-24 h-24 rounded-full border border-neutral-400 flex justify-center items-center">
-                        <div class="w-20 h-20 rounded-full border border-red-800 flex justify-center items-center">
-                            <img class="w-16 h-16 rounded-full" src="/static/assets/c1.png" alt="Placeholder image">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col justify-center items-center gap-4">
-                    <div class="w-72 text-center text-neutral-400 text-sm font-normal font-work-sans leading-snug">“I've
-                        used The Notary Hub for all my real estate transaction notarizations for years. Their notaries
-                        are always professional and efficient.”</div>
-                    <div class="text-center text-neutral-300 text-xl font-medium font-work-sans italic">Jane D.,
-                        Attorney</div>
-                </div>
-            </div>
-            <div
-                class="w-96 h-80 z-20 p-7 bg-zinc-900 rounded shadow-custom-xl border border-gray-700 flex flex-col justify-center items-center gap-2.5 hover:bg-cardhover">
-                <div class="flex items-center gap-2.5">
-                    <div class="w-24 h-24 rounded-full border border-neutral-400 flex justify-center items-center">
-                        <div class="w-20 h-20 rounded-full border border-red-800 flex justify-center items-center">
-                            <img class="w-16 h-16 rounded-full" src="/static/assets/c2.png" alt="Placeholder image">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col justify-center items-center gap-4">
-                    <div class="w-72 text-center text-neutral-400 text-sm font-normal font-work-sans leading-snug">"We
-                        switched our company's notary work to The Notary Hub last year and have been very pleased with
-                        their responsiveness and availability."</div>
-                    <div class="text-center text-neutral-300 text-xl font-medium font-work-sans italic">Jim K., HR
-                        Manager</div>
-                </div>
-            </div>
-            <div
-                class="w-96 h-80 z-20 p-7 bg-zinc-900 rounded shadow-custom-xl border border-gray-700 flex flex-col justify-center items-center gap-2.5 hover:bg-cardhover">
-                <div class="flex items-center gap-2.5">
-                    <div class="w-24 h-24 rounded-full border border-neutral-400 flex justify-center items-center">
-                        <div class="w-20 h-20 rounded-full border border-red-800 flex justify-center items-center">
-                            <img class="w-16 h-16 rounded-full" src="/static/assets/c3.png" alt="Placeholder image">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col justify-center items-center gap-4">
-                    <div class="w-72 text-center text-neutral-400 text-sm font-normal font-work-sans leading-snug">"I
-                        needed documents notarized quickly for a loan application. The Notary Hub got me in right away
-                        and notarized everything accurately."</div>
-                    <div class="text-center text-neutral-300 text-xl font-medium font-work-sans italic">David T.,
-                        Business Owner</div>
-                </div>
-            </div>
-
-        </div>
-        <div class="flex justify-center mt-8">
-            <button
-                class="w-12 h-12 mr-4 rounded-full bg-dark-blue hover:bg-primary-red transition-colors duration-300"><img
-                    class="mx-auto" src="/static/assets/Arrow 1.svg" alt=""></button>
-            <button class="w-12 h-12 rounded-full bg-dark-blue hover:bg-primary-red transition-colors duration-300"><img
-                    class="mx-auto" src="/static/assets/Arrow 2.svg" alt=""></button>
-
-        </div>
-        </div>
-    </section>
-    <section id="bank" class="overflow-y-hidden bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
-        <div class="item">
-            <div
-                class="parallax-content relative z-10 flex flex-col items-center justify-center py-20 text-white service">
-                <h1 class="mt-6 text-4xl font-bold">BANK PARTNERSHIP</h1>
-                <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
-                <img class="mt-8" src="/static/assets/Partners.png" alt="">
-
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <section id="kontak" class="overflow-y-hidden pt h-full bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg ">
-        <div class="item">
-            <div class="flex flex-wrap justify-center items-center">
-                <div class="flex kontak">
+                <div class="grid grid-cols-2 w-1/2 gap-y-8 gap-x-8 ml-auto mr-auto -mt-8">
                     <div
-                        class="w-1/2 -mt-2 parallax-content relative z-10 flex flex-col item-center py-20 text-white service">
-                        <h1 class="text-4xl font-bold">CONTACT</h1>
-                        <img class="mt-2 ml-auto mr-auto" src="/static/assets/Line 1.svg" alt="">
-                        <div class="mt-2 ml-auto mr-auto" style="text-align: center;width:50%">
-                            <p>REZA ZULNIZAR MUKHSIN S.H., M.Kn.</p>
-                            <p>Email:rezazulnizarnotaris@gmail.com </p>
-                            <p>Tel: +62 812-1166-6999</p>
-                            <a href="https://maps.app.goo.gl/PuJMWzNRd9TiWx6B6?g_st=ic">
-                                <p class="mt-6 underline">JL.Ampera Raya No.4, Cilandak Tim., Ps. Minggu, Kota Jakarta
-                                    Selatan, Daerah
-                                    Khusus Ibukota Jakarta
-                                    12560</p>
-                            </a>
+                        class="h-71 z-20 px-24 py-5 bg-zinc-900 rounded shadow-xl border border-gray-700 flex-col justify-center items-center gap-2.5 inline-flex hover:bg-cardhover">
+                        <div class="flex-col justify-start items-center gap-8 flex">
+                            <div class="w-9 h-9 p-0.5 justify-center items-center inline-flex">
+                                <div class="w-7 h-7 relative">
+                                    <img src="/static/assets/home.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="flex-col justify-start items-center gap-4 flex">
+                                <div
+                                    class="self-stretch text-center text-neutral-300 text-2xl font-semibold font-work-sans">
+                                    Pendirian & Pengurusan Perusahaan</div>
+                                <div
+                                    class="w-72 text-center text-neutral-300 text-sm font-normal font-work-sans leading-snug">
+                                    Pendirian badan hukum (PT, CV, Yayasan dan Perkumpulan)</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2 mt-8 p-8 z-10 form">
-                        <h1 class="text-2xl font-bold mb-4 text-white">Get a personal consultation</h1>
-                        <img class="mt-2 ml-auto mr-auto" src="/static/assets/Line 1.svg" alt="">
+                    <div
+                        class="w-100 h-72 z-20 px-24 py-5 bg-zinc-900 rounded shadow-xl border border-gray-700 flex-col justify-center items-center gap-2.5 inline-flex hover:bg-cardhover">
+                        <div class="flex-col justify-start items-center gap-8 flex">
+                            <div class="w-9 h-9 p-0.5 justify-center items-center inline-flex">
+                                <div class="w-7 h-7 relative">
+                                    <img src="/static/assets/home.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="flex-col justify-start items-center gap-4 flex">
+                                <div
+                                    class="self-stretch text-center text-neutral-300 text-2xl font-semibold font-work-sans">
+                                    Transaksi Keuangan <br />& Kredit</div>
+                                <div
+                                    class="w-72 text-center text-neutral-300 text-sm font-normal font-work-sans leading-snug">
+                                    Akta Perjanjian Kredit, & Akta Perjanjian Hutang</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-100 h-72 z-20 px-24 py-5 bg-zinc-900 rounded shadow-xl border border-gray-700 flex-col justify-center items-center gap-2.5 inline-flex hover:bg-cardhover">
+                        <div class="flex-col justify-start items-center gap-8 flex">
+                            <div class="w-9 h-9 p-0.5 justify-center items-center inline-flex">
+                                <div class="w-7 h-7 relative">
+                                    <img src="/static/assets/home.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="flex-col justify-start items-center gap-4 flex">
+                                <div
+                                    class="self-stretch text-center text-neutral-300 text-2xl font-semibold font-work-sans">
+                                    Transaksi Properti</div>
+                                <div
+                                    class="w-72 text-center text-neutral-300 text-sm font-normal font-work-sans leading-snug">
+                                    Akta Sewa Menyewa, Akta Jual Beli, Akta Hibah, Akta Tukar Menukar, Akta Pemasukan
+                                    Dalam
+                                    Perusahaan/Inbreng</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-100 h-72 z-20 px-24 py-5 bg-zinc-900 rounded shadow-xl border border-gray-700 flex-col justify-center items-center gap-2.5 inline-flex hover:bg-cardhover">
+                        <div class="flex-col justify-start items-center gap-8 flex">
+                            <div class="w-9 h-9 p-0.5 justify-center items-center inline-flex">
+                                <div class="w-7 h-7 relative">
+                                    <img src="/static/assets/home.svg" alt="">
 
-                        <div>
-                            <label for="first_name" class="block text-white">First Name *</label>
-                            <input type="text" id="first_name" name="first_name"
-                                class="form-input mt-1 mb-5 block h-9 border-gray-300 shadow-md " style="width: 90%;"
-                                required>
+                                </div>
+                            </div>
+                            <div class="flex-col justify-start items-center gap-4 flex">
+                                <div
+                                    class="self-stretch text-center text-neutral-300 text-2xl font-semibold font-work-sans">
+                                    Hak Kepemilikan</div>
+                                <div
+                                    class="w-72 text-center text-neutral-300 text-sm font-normal font-work-sans leading-snug">
+                                    Akta Pembagian Hak Bersama, Akta Hak Guna Bangunan di Atas Tanah Hak Milik, Akta
+                                    Pemberian
+                                    Hak Pakai di Atas Tanah Hak Milik, Akta Pemberian Hak Tanggungan </div>
+                            </div>
                         </div>
-                        <div>
-                            <label for="last_name" class="block text-white">Last Name *</label>
-                            <input type="text" id="last_name" name="last_name"
-                                class="form-input mt-1 mb-5 block  h-9 border-gray-300 shadow-md" style="width: 90%;"
-                                required>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class=" h-screen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
+            <div class="item">
+                <div
+                    class="parallax-content relative z-10 flex flex-col items-center justify-center py-20 text-white service">
+                    <h1 class="mt-6 text-4xl font-bold">About Our Notary Agency</h1>
+                    <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
+                    <p class="mt-8">Kantor Notaris dan PPAT Reza Zulnizar Mukhsin, SH, MKn. didirikan pada tahun 2017 di
+                        kabupaten karawang.</p>
+                    <p>Setelah berpengalaman di bidang kenotariatan dan PPAT, juga bermitra dengan ratusan client
+                        perorangan,
+                        instansi, dan perusahaan lokal</p>
+                    <p>maupun asing. Pada tahun 2023 Kantor Notaris dan PPAT Reza Zulnizar
+                        Mukhsin, SH, M.Kn pindah di Jakarta Selatan sampai dengan sekarang.</p>
+
+                </div>
+                <img class="mx-auto shadow-custom-xl" src="/static/assets/about.png" alt="">
+            </div>
+        </section>
+
+        <section id="vision" class="h-screeen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
+            <img class="absolute  ellipse1" src="/static/assets/blur1.png" alt="">
+            <div class="item">
+                <div
+                    class="parallax-content relative z-10 flex flex-col items-center justify-center py-20 text-white service">
+                    <h1 class="mt-6 text-4xl font-bold">OUR VISION & MISSION</h1>
+                    <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
+                    <p class="mt-12">Pelayanan yang terbaik demi legalitas para pihak dengan</p>
+                    <p>amanah dan berintegritas.</p>
+                    <div
+                        class="w-1/2 h-14 mt-8 p-4 bg-zinc-900 rounded-3xl border-2 border-gray-700 flex-col justify-center items-start gap-2.5 inline-flex hover:bg-cardhover">
+                        <div class="self-stretch justify-start items-center gap-3 inline-flex">
+                            <div class="flex-col justify-start items-center inline-flex">
+                                <img src="/static/assets/visi01.png" alt="">
+                            </div>
+                            <div class="grow shrink basis-0 flex-col justify-start items-start gap-2.5 inline-flex">
+                                <div class="self-stretch text-neutral-300 text-xl font-normal font-Work Sans">Memberikan
+                                    pelayanan dengan kualitas yang terbaik kepada mitra</div>
+                            </div>
                         </div>
-                        <div>
-                            <label for="email" class="block text-white">Email *</label>
-                            <input type="email" id="email" name="email"
-                                class="form-input mt-1 mb-5 block  h-9 border-gray-300 shadow-md" style="width: 90%;"
-                                required>
+                    </div>
+
+                    <div
+                        class="w-1/2 h-14 mt-8 p-4 bg-zinc-900 rounded-3xl border-2 border-gray-700 flex-col justify-center items-start gap-2.5 inline-flex hover:bg-cardhover">
+                        <div class="self-stretch justify-start items-center gap-3 inline-flex">
+                            <div class="flex-col justify-start items-center inline-flex">
+                                <img src="/static/assets/visi02.png" alt="">
+                            </div>
+                            <div class="grow shrink basis-0 flex-col justify-start items-start gap-2.5 inline-flex">
+                                <div class="self-stretch text-neutral-300 text-xl font-normal font-Work Sans">Menjalin
+                                    komunikasi yang harmonis dengan mitra</div>
+                            </div>
                         </div>
-                        <div>
-                            <label for="message" class="block text-white">Message *</label>
-                            <textarea id="message" name="message" rows="5"
-                                class="form-textarea mt-1 mb-5 block  border-gray-300 shadow-md" style="width: 90%;"
-                                required></textarea>
+                    </div>
+
+                    <div
+                        class="w-1/2 h-20 mt-8 p-4 bg-zinc-900 rounded-3xl border-2 border-gray-700 flex-col justify-center items-start gap-2.5 inline-flex hover:bg-cardhover">
+                        <div class="self-stretch justify-start items-center gap-3 inline-flex">
+                            <div class="flex-col justify-start items-center inline-flex">
+                                <img src="/static/assets/visi03.png" alt="">
+                            </div>
+                            <div class="grow shrink basis-0 flex-col justify-start items-start gap-2.5 inline-flex">
+                                <div class="self-stretch text-neutral-300 text-xl font-normal font-Work Sans">Memberikan
+                                    edukasi dan literasi terkait kenotarian dan bidang hukum secara transparan dan
+                                    bertanggung jawab kepada mitra & masyarakat</div>
+                            </div>
                         </div>
-                        <button id="submit" type="button"
-                            class="bg-all-bg rounded-full text-white px-4 py-2 hover:bg-primary-red transition duration-500"
-                            style="width: 90%;box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.25), 3px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+                    </div>
+                </div>
+
+        </section>
+
+        <img class="dekor2" src="/static/assets/Group 5.svg" alt="">
+        <img class="absolute z-0 dekor" src="/static/assets/dekor.png" alt="">
+        <img class="absolute z-0 ellipse2" src="/static/assets/blur2.png" alt="">
+        <section id="testi" class="overflow-y-hidden h-screen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
+            <div class="parallax-content relative flex flex-col items-center justify-center py-20 text-white service">
+                <h1 class="mt-6 text-4xl font-bold">WHAT OUR CLIENTS SAY</h1>
+                <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
+                <p class="mt-8">See what our past customers have said about our convenient, honest, and</p>
+                <p>professional notary services. We have helped clients from individuals to major</p>
+                <p>corporations.</p>
+            </div>
+            <div class="flex justify-center gap-x-8  ml-auto mr-auto -mt-8">
+                <div
+                    class="w-96 h-80 z-20 p-7 bg-zinc-900 rounded shadow-custom-xl border border-gray-700 flex flex-col justify-center items-center gap-2.5 hover:bg-cardhover">
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-24 h-24 rounded-full border border-neutral-400 flex justify-center items-center">
+                            <div class="w-20 h-20 rounded-full border border-red-800 flex justify-center items-center">
+                                <img class="w-16 h-16 rounded-full" src="/static/assets/c1.png" alt="Placeholder image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center items-center gap-4">
+                        <div class="w-72 text-center text-neutral-400 text-sm font-normal font-work-sans leading-snug">
+                            “I've
+                            used The Notary Hub for all my real estate transaction notarizations for years. Their
+                            notaries
+                            are always professional and efficient.”</div>
+                        <div class="text-center text-neutral-300 text-xl font-medium font-work-sans italic">Jane D.,
+                            Attorney</div>
+                    </div>
+                </div>
+                <div
+                    class="w-96 h-80 z-20 p-7 bg-zinc-900 rounded shadow-custom-xl border border-gray-700 flex flex-col justify-center items-center gap-2.5 hover:bg-cardhover">
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-24 h-24 rounded-full border border-neutral-400 flex justify-center items-center">
+                            <div class="w-20 h-20 rounded-full border border-red-800 flex justify-center items-center">
+                                <img class="w-16 h-16 rounded-full" src="/static/assets/c2.png" alt="Placeholder image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center items-center gap-4">
+                        <div class="w-72 text-center text-neutral-400 text-sm font-normal font-work-sans leading-snug">
+                            "We
+                            switched our company's notary work to The Notary Hub last year and have been very pleased
+                            with
+                            their responsiveness and availability."</div>
+                        <div class="text-center text-neutral-300 text-xl font-medium font-work-sans italic">Jim K., HR
+                            Manager</div>
+                    </div>
+                </div>
+                <div
+                    class="w-96 h-80 z-20 p-7 bg-zinc-900 rounded shadow-custom-xl border border-gray-700 flex flex-col justify-center items-center gap-2.5 hover:bg-cardhover">
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-24 h-24 rounded-full border border-neutral-400 flex justify-center items-center">
+                            <div class="w-20 h-20 rounded-full border border-red-800 flex justify-center items-center">
+                                <img class="w-16 h-16 rounded-full" src="/static/assets/c3.png" alt="Placeholder image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center items-center gap-4">
+                        <div class="w-72 text-center text-neutral-400 text-sm font-normal font-work-sans leading-snug">
+                            "I
+                            needed documents notarized quickly for a loan application. The Notary Hub got me in right
+                            away
+                            and notarized everything accurately."</div>
+                        <div class="text-center text-neutral-300 text-xl font-medium font-work-sans italic">David T.,
+                            Business Owner</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex justify-center mt-8">
+                <button
+                    class="w-12 h-12 mr-4 rounded-full bg-dark-blue hover:bg-primary-red transition-colors duration-300"><img
+                        class="mx-auto" src="/static/assets/Arrow 1.svg" alt=""></button>
+                <button
+                    class="w-12 h-12 rounded-full bg-dark-blue hover:bg-primary-red transition-colors duration-300"><img
+                        class="mx-auto" src="/static/assets/Arrow 2.svg" alt=""></button>
+
+            </div>
+    </div>
+    </section>
+    </div>
+    <div class="hidden lg:block">
+        <section id="bank" class="overflow-y-hidden bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
+            <div class="item">
+                <div
+                    class="parallax-content relative z-10 flex flex-col items-center justify-center py-20 text-white service">
+                    <h1 class="mt-6 text-4xl font-bold">BANK PARTNERSHIP</h1>
+                    <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
+                    <img class="mt-8" src="/static/assets/Partners.png" alt="">
+
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="overflow-y-hidden pt h-full bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg ">
+            <div class="item">
+                <div class="flex flex-wrap justify-center items-center">
+                    <div class="flex kontak">
+                        <div
+                            class="w-1/2 -mt-2 parallax-content relative z-10 flex flex-col item-center py-20 text-white service">
+                            <h1 class="text-4xl font-bold">CONTACT</h1>
+                            <img class="mt-2 ml-auto mr-auto" src="/static/assets/Line 1.svg" alt="">
+                            <div class="mt-2 ml-auto mr-auto" style="text-align: center;width:50%">
+                                <p>REZA ZULNIZAR MUKHSIN S.H., M.Kn.</p>
+                                <p>Email:rezazulnizarnotaris@gmail.com </p>
+                                <p>Tel: +62 812-1166-6999</p>
+                                <a href="https://maps.app.goo.gl/PuJMWzNRd9TiWx6B6?g_st=ic">
+                                    <p class="mt-6 underline">JL.Ampera Raya No.4, Cilandak Tim., Ps. Minggu, Kota
+                                        Jakarta
+                                        Selatan, Daerah
+                                        Khusus Ibukota Jakarta
+                                        12560</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 mt-8 p-8 z-10 form">
+                            <h1 class="text-2xl font-bold mb-4 text-white">Get a personal consultation</h1>
+                            <img class="mt-2 ml-auto mr-auto" src="/static/assets/Line 1.svg" alt="">
+
+                            <div>
+                                <label for="first_name" class="block text-white">First Name *</label>
+                                <input type="text" id="first_name" name="first_name"
+                                    class="form-input mt-1 mb-5 block h-9 border-gray-300 shadow-md "
+                                    style="width: 90%;" required>
+                            </div>
+                            <div>
+                                <label for="last_name" class="block text-white">Last Name *</label>
+                                <input type="text" id="last_name" name="last_name"
+                                    class="form-input mt-1 mb-5 block  h-9 border-gray-300 shadow-md"
+                                    style="width: 90%;" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-white">Email *</label>
+                                <input type="email" id="email" name="email"
+                                    class="form-input mt-1 mb-5 block  h-9 border-gray-300 shadow-md"
+                                    style="width: 90%;" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-white">Message *</label>
+                                <textarea id="message" name="message" rows="5"
+                                    class="form-textarea mt-1 mb-5 block  border-gray-300 shadow-md" style="width: 90%;"
+                                    required></textarea>
+                            </div>
+                            <button id="submit" type="button"
+                                class="bg-all-bg rounded-full text-white px-4 py-2 hover:bg-primary-red transition duration-500"
+                                style="width: 90%;box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.25), 3px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
                         " onclick="send_email()">Submit</button>
-                        <button id="loading" type="button"
-                            class="hidden inline-flex items-center justify-center    px-4 py-2 font-semibold leading-6 text-sm shadow-md rounded-md text-white bg-primary-red hover:bg-primary-red transition ease-in-out duration-150 cursor-not-allowed"
-                            disabled style="width: 90%;box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.25), 3px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+                            <button id="loading" type="button"
+                                class="hidden inline-flex items-center justify-center px-4 py-2 font-semibold leading-6 text-sm shadow-md rounded-md text-white bg-primary-red hover:bg-primary-red transition ease-in-out duration-150 cursor-not-allowed"
+                                disabled style="width: 90%;box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.25), 3px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
                         ">
-                            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg" fill="none">
-                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
-                                    stroke-width="4">
-                                </circle>
-                                <path class="opacity-75" fill="currentColor"
-                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
-                                </path>
-                            </svg>
-                            Loading...
+                                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                        stroke-width="4">
+                                    </circle>
+                                    <path class="opacity-75" fill="currentColor"
+                                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                                    </path>
+                                </svg>
+                                Loading...
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="smth" href="#home"><img class="pt-20" src="/static/assets/Scroll To Top.png" alt=""></a>
+        </section>
+        <footer class="items-center justify-end pr-10">
+            <div class="flex items-center space-x-4">
+                <a href="" target="_blank"><img src="/static/assets/instagram.svg" alt="instagram"></a>
+                <a href="" target="_blank"><img src="/static/assets/facebook.svg" alt="facebook"></a>
+                <a href="" target="_blank"><img src="/static/assets/x.svg" alt="x"></a>
+            </div>
+        </footer>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="block lg:hidden overflow-x-hidden">
+        <div class="flex justify-center">
+            <nav class="bg-dark-blue z-10 fixed w-mobile top-5 shadow-custom-xl ">
+                <div class="mx-auto px-2 ">
+                    <div class="relative flex items-center justify-start h-16">
+                        <div class="flex-shrink-0 flex items-start mr-4">
+                            <a href="/"><img class="block lg:hidden h-20 w-auto" src="/static/assets/Logo White.png"
+                                    alt="Logo"></a>
+                        </div>
+                        <div class="inset-y-0 z-20 absolute custom right-0 wrapper lg:hidden">
+                            <button class="p-2 " aria-expanded="true" onclick="toggleMenu()" id="nav-icon1">
+                                <div>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Mode Links -->
+                <div class="hidden lg:hidden z-20 " id="mobile-menu">
+                    <div class="pt-20 space-y-2 ml-8">
+                        <a href="#homem" class="smth">
+                            <div class="mb-10 text-stone-300 text-2xl font-extrabold font-Lexend Tera uppercase">HOME
+                            </div>
+                        </a>
+                        <a href="#servicesm" class="smth">
+                            <div class="mb-10 text-stone-300 text-2xl font-extrabold font-['Lexend Tera'] uppercase">
+                                services</div>
+                        </a>
+                        <a href="#aboutm" class="smth">
+                            <div class="mb-10 text-stone-300 text-2xl font-extrabold font-['Lexend Tera'] uppercase">
+                                about</div>
+                        </a>
+                        <a href="#visionm" class="smth">
+                            <div class="mb-10 text-stone-300 text-2xl font-extrabold font-['Lexend Tera'] uppercase">our
+                                vision</div>
+                        </a>
+                        <button class="w-36 h-8 px-3.5 bg-red-800 rounded-3xl shadow-xl justify-center items-center"
+                            style="box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.25), 3px 4px 4px 0px rgba(0, 0, 0, 0.25) inset">
+                            <div class="text-zinc-100 text-base font-medium fontWork Sans">CONSULT NOW</div>
                         </button>
                     </div>
                 </div>
+            </nav>
+        </div>
+
+        <section id="homem" class="h-full bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
+            <div class="ml-5 pt-40 ">
+                <div class="w-full text-center">
+
+                    <p class="flex justify-center text-center small_textm "><img
+                            class="relative z-0 mr-2 pb-2 overflow-hidden mt-1 w-4" src="/static/assets/Like.svg">
+                        Notarizing With Integrity Since 2017</p>
+                    <p class="big_textm">NOTARIS & PPAT JAKARTA SELATAN</p>
+                    <p class="flex justify-center text-center mt-4 small2m">REZA ZULNIZAR MUKHSIN <img
+                            class="relative flex z-0 ml-2 overflow-hidden " src="/static/assets/cheklist.svg" alt="">
+                    </p>
+                    <div>
+                        <div class="flex mt-4 justify-center">
+                            <img src="/static/assets/Line 1.svg" alt="">
+                        </div>
+
+                        <button
+                            class="mt-10 w-36 h-8 px-3.5 bg-red-800 rounded-3xl shadow-xl justify-center items-center"
+                            style="box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.25), 3px 4px 4px 0px rgba(0, 0, 0, 0.25) inset">
+                            <div class="text-zinc-100 text-base font-medium fontWork Sans">CONSULT NOW</div>
+                        </button>
+                    </div>
+                    <img class="h-2/3 ml-[25%]" style="width: 50%; margin-top:5%" src="/static/assets/Photo.svg"
+                        alt="Profile">
+                </div>
+        </section>
+
+        <section id="servicesm" class="h-[80vh] bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg pt-20">
+            <div class="parallax-content relative z-0 text-white service text-center ">
+                <h1 class=" text-4xl font-bold">OUR SERVICES</h1>
+                <img class="mt-4 ml-[25%]" src="/static/assets/Line 1.svg" alt="">
+                <div class="mt-8 text-[13px]">
+                    <p>Our expert notaries properly validate and</p>
+                    <p>notarize your paperwork to make sure it</p>
+                    <p>meets legal standards.</p>
+                </div>
             </div>
-        </div>
-        <a class="smth" href="#home"><img class="pt-20" src="/static/assets/Scroll To Top.png" alt=""></a>
-    </section>
-    <footer class="items-center justify-end pr-10">
-        <div class="flex items-center space-x-4">
-            <a href="" target="_blank"><img src="/static/assets/instagram.svg" alt="instagram"></a>
-            <a href="" target="_blank"><img src="/static/assets/facebook.svg" alt="facebook"></a>
-            <a href="" target="_blank"><img src="/static/assets/x.svg" alt="x"></a>
-        </div>
-    </footer>
-    
+            <div id="default-carousel" class="relative w-full ml-[15%] mt-8" data-carousel="slide">
+                <!-- Carousel wrapper -->
+                <div class="relative h-auto rounded-lg md:h-96">
+                    <div class="my-slide fade" data-carousel-item>
+                        <div
+                            class="h-[18.5vh] w-[70%] z-10 px-24 py-5 bg-zinc-900 rounded shadow-xl border border-gray-700 flex-col justify-center items-center gap-2.5 inline-flex hover:bg-cardhover">
+                            <div class="flex-col justify-start items-center gap-2 flex">
+                                <div class="w-9 h-9 p-0.5 justify-center items-center inline-flex">
+                                    <div class="w-7 h-7 relative">
+                                        <img src="/static/assets/home.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="flex-col justify-start items-center gap-2 flex">
+                                    <div
+                                        class="self-stretch text-center text-neutral-300 text-[15px] font-semibold font-work-sans">
+                                        Pendirian & Pengurusan Perusahaan</div>
+                                    <div
+                                        class="w-72 text-center text-neutral-300 text-[13px] font-normal font-work-sans leading-snug">
+                                        Pendirian badan hukum (PT, CV, Yayasan dan Perkumpulan)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="h-71 w-[70%] z-10 mt-4 px-24 py-5 bg-zinc-900 rounded shadow-xl border border-gray-700 flex-col justify-center items-center gap-2.5 inline-flex hover:bg-cardhover">
+                            <div class="flex-col justify-start items-center gap-2 flex">
+                                <div class="w-9 h-9 p-0.5 justify-center items-center inline-flex">
+                                    <div class="w-7 h-7 relative">
+                                        <img src="/static/assets/home.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="flex-col justify-start items-center gap-2 flex">
+                                    <div
+                                        class="self-stretch text-center text-neutral-300 text-[15px] font-semibold font-work-sans">
+                                        Transaksi Keuangan <br />& Kredit</div>
+                                    <div
+                                        class="w-72 text-center text-neutral-300 text-[13px] font-normal font-work-sans leading-snug">
+                                        Akta Perjanjian Kredit, & Akta Perjanjian Hutang </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+
+                    <div class="my-slide fade justify-center" data-carousel-item>
+                        <div
+                            class="h-71 w-[70%] z-10 px-24 py-5 bg-zinc-900 rounded shadow-xl border border-gray-700 flex-col justify-center items-center gap-2.5 inline-flex hover:bg-cardhover">
+                            <div class="flex-col justify-start items-center gap-2 flex">
+                                <div class="w-9 h-9 p-0.5 justify-center items-center inline-flex">
+                                    <div class="w-7 h-7 relative">
+                                        <img src="/static/assets/home.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="flex-col justify-start items-center gap-2 flex">
+                                    <div
+                                        class="self-stretch text-center text-neutral-300 text-[15px] font-semibold font-work-sans">
+                                        Transaksi Properti</div>
+                                    <div
+                                        class="w-72 text-center text-neutral-300 text-[13px] font-normal font-work-sans leading-snug">
+                                        Akta Sewa Menyewa, Akta Jual Beli, Akta Hibah, Akta Tukar Menukar, Akta
+                                        Pemasukan
+                                        Dalam
+                                        Perusahaan/Inbreng</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="h-71 w-[70%] z-10 mt-4 px-24 py-5 bg-zinc-900 rounded shadow-xl border border-gray-700 flex-col justify-center items-center gap-2.5 inline-flex hover:bg-cardhover">
+                            <div class="flex-col justify-start items-center gap-2 flex">
+                                <div class="w-9 h-9 p-0.5 justify-center items-center inline-flex">
+                                    <div class="w-7 h-7 relative">
+                                        <img src="/static/assets/home.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="flex-col justify-start items-center gap-2 flex">
+                                    <div
+                                        class="self-stretch text-center text-neutral-300 text-[15px] font-semibold font-work-sans">
+                                        Hak Kepemilikan</div>
+                                    <div
+                                        class="w-72 text-center text-neutral-300 text-[13px] font-normal font-work-sans leading-snug">
+                                        Akta Pembagian Hak Bersama, Akta Hak Guna Bangunan di Atas Tanah Hak Milik, Akta
+                                        Pemberian
+                                        Hak Pakai di Atas Tanah Hak Milik, Akta Pemberian Hak Tanggungan </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="relative z-30 flex justify-center mt-4 space-x-3">
+                <button type="button" id="" class="w-3 bg-indicator hover:bg-white dot h-3 rounded-full " aria-current="true"
+                    aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 bg-indicator hover:bg-white dot rounded-full " aria-current="false"
+                    aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            </div>
+        </section>
+
+        <section id="aboutm" class="h-[80vh] bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
+            <div class="parallax-content relative z-0 text-white service text-center ">
+                <h1 class=" text-4xl font-bold">ABOUT OUR AGENCY</h1>
+                <img class="mt-4 ml-[25%]" src="/static/assets/Line 1.svg" alt="">
+                <div class="mt-8 text-[13px]">
+                    <p>Our expert notaries properly validate and</p>
+                    <p>notarize your paperwork to make sure it</p>
+                    <p>meets legal standards.</p>
+                </div>
+            </div>
+            <div id="default-carousel" class="relative w-full ml-[15%] mt-8" data-carousel="slide">
+                <!-- Carousel wrapper -->
+                <div class="relative h-auto rounded-lg md:h-96">
+                    <div class="" data-carousel-item>
+                        <div
+                            class="h-[18.5vh] w-[70%] z-10 px-24 py-5 bg-zinc-900 rounded shadow-xl border border-gray-700 flex-col justify-center items-center gap-2.5 inline-flex hover:bg-cardhover">
+                            <div class="flex-col justify-start items-center gap-2 flex">
+                                <div class="w-9 h-9 p-0.5 justify-center items-center inline-flex">
+                                    <div class="w-7 h-7 relative">
+                                        <img src="/static/assets/home.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="flex-col justify-start items-center gap-2 flex">
+                                    <div
+                                        class="self-stretch text-center text-neutral-300 text-[15px] font-semibold font-work-sans">
+                                        Pendirian & Pengurusan Perusahaan</div>
+                                    <div
+                                        class="w-72 text-center text-neutral-300 text-[13px] font-normal font-work-sans leading-snug">
+                                        Pendirian badan hukum (PT, CV, Yayasan dan Perkumpulan)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+
+                    <div class="" data-carousel-item>
+                        <div
+                            class="h-71 w-[70%] z-10 px-24 py-5 bg-zinc-900 rounded shadow-xl border border-gray-700 flex-col justify-center items-center gap-2.5 inline-flex hover:bg-cardhover">
+                            <div class="flex-col justify-start items-center gap-2 flex">
+                                <div class="w-9 h-9 p-0.5 justify-center items-center inline-flex">
+                                    <div class="w-7 h-7 relative">
+                                        <img src="/static/assets/home.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="flex-col justify-start items-center gap-2 flex">
+                                    <div
+                                        class="self-stretch text-center text-neutral-300 text-[15px] font-semibold font-work-sans">
+                                        Transaksi Properti</div>
+                                    <div
+                                        class="w-72 text-center text-neutral-300 text-[13px] font-normal font-work-sans leading-snug">
+                                        Akta Sewa Menyewa, Akta Jual Beli, Akta Hibah, Akta Tukar Menukar, Akta
+                                        Pemasukan
+                                        Dalam
+                                        Perusahaan/Inbreng</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+               
+            </div>
+            <div class="relative z-30 flex justify-center mt-4 space-x-3">
+                <button type="button" id="" class="w-3 bg-indicator hover:bg-white dot h-3 rounded-full " aria-current="true"
+                    aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 bg-indicator hover:bg-white dot rounded-full " aria-current="false"
+                    aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            </div>
+        </section>
+
+        <section id="visionm" class="h-screen bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
+            <div class="parallax-content relative z-0 text-white service text-center ">
+                <h1 class=" text-4xl font-bold">OUR VISION & MISSION</h1>
+                <img class="mt-4 ml-[25%]" src="/static/assets/Line 1.svg" alt="">
+                <p class="mt-12">Pelayanan yang terbaik demi legalitas para pihak </p>
+                <p>dengan amanah dan berintegritas.</p>
+            </div>
+        </section>
     </div>
-    <div class="block md:hidden"></div>
 </body>
 
 </html>
