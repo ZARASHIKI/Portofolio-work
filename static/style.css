@@ -82,7 +82,7 @@
   height: 100%;
   background-color: #1B1D21;
   transition: right 2.5s ease;
-  z-index: 0;
+  z-index: 10;
 }
 
 #mobile-menu.open {
@@ -446,27 +446,27 @@ transition: background-color 1.2s ease;
   }
   .dekorm1{
     position: absolute;
-    z-index: 0;
+    z-index: 10;
     right: 0;
     top: 9rem;
   }
   .dekorm2{
     position: absolute;
-    z-index: 0;
+    z-index: 10;
     left: 0;
     top: 63rem;
   }
   .dekorm3{
     height: 20%;
     position: absolute;
-    z-index: 0;
+    z-index: 10;
     left: 0;
     top: 198rem;
   }
   .dekorm4{
     width: 60%;
     position: absolute;
-    z-index: 0;
+    z-index: 10;
     right: 0;
     top: 242rem;
   }
@@ -481,26 +481,26 @@ transition: background-color 1.2s ease;
   }
   .dekorm1{
     position: absolute;
-    z-index: 0;
+    z-index: 10;
     right: 0;
     top: 9rem;
   }
   .dekorm2{
     position: absolute;
-    z-index: 0;
+    z-index: 10;
     left: 0;
     top: 44rem;
   }
   .dekorm3{
     position: absolute;
-    z-index: 0;
+    z-index: 10;
     left: 0;
     top: 162rem;
   }
   .dekorm4{
     width: 60%;
     position: absolute;
-    z-index: 0;
+    z-index: 10;
     right: 0;
     top: 205rem;
   }
