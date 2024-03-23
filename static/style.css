@@ -143,10 +143,21 @@
 .service h1 {
   color: var(--Primary-Red, #921616);
   text-align: center;
-  font-family: "Lexend Tera";
+  font-family:"Lexend Tera";
   font-size: 32px;
   font-style: normal;
   font-weight: 1000;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.servicem h1 {
+  color: var(--Primary-Red, #921616);
+  text-align: center;
+  font-family: "Lexend Tera";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 800;
   line-height: normal;
   text-transform: uppercase;
 }
@@ -160,7 +171,16 @@
   line-height: normal;
   text-transform: uppercase;
 }
-
+.formm h1 {
+  color: var(--Text-1, #D2D2D2);
+  text-align: center; 
+  font-family: "Lexend Tera";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
 .kontak {
   width: 70%;
   height: 90vh;
@@ -173,7 +193,16 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.kontakm{
+height: 980px;
+border-radius: 8px;
+border: 1px solid var(--Outline, #414751);
+background-image:linear-gradient(178deg, #251010 -11.68%, rgba(26, 26, 26, 0.00) 77.54%), url('/static/assets/texturem.png');
+background-color: lightgray;
+background-position: 50%;
+background-repeat: no-repeat;
+background-size: cover;
+}
 footer {
   display: flex;
   width: 100%;
@@ -339,14 +368,42 @@ body{
 
 .fade {
   animation-name: slideInOut;
-  animation-duration: 6s;
+  animation-duration: 6s; /* Total duration including pause */
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  opacity: 0; /* Start with opacity 0 */
+}
+
+@keyframes slideInOut {
+  0%, 20% { 
+    transform: translateX(100%);
+    opacity: 0; 
+  }
+  25%, 45% { 
+    transform: translateX(0%);
+    opacity: 1; 
+  }
+  50%, 70% { 
+    transform: translateX(0%);
+    opacity: 1; 
+  }
+  75%, 100% { 
+    transform: translateX(-100%);
+    opacity: 0; 
+  }
+}
+
+.fade2 {
+  animation-name: slideInOut2;
+  animation-duration: 5.5s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   opacity: 0; /* Mulai dengan opasitas 0 */
 }
 
-@keyframes slideInOut {
+@keyframes slideInOut2 {
   0%, 8.333% { /* Start moving immediately, reach the midpoint quickly */
     transform: translateX(100%);
     opacity: 0; /* Opacity 0 saat animasi dimulai */
@@ -368,7 +425,12 @@ body{
     opacity: 0; /* Tetap pada opasitas 1 saat animasi selesai */
   }
 }
-
+.my-slide2{
+  display: none;
+}
+.my-slide3{
+  display: none;
+}
 .dot{
 transition: background-color 1.2s ease;
 }

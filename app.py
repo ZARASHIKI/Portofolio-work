@@ -4,9 +4,16 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 app = Flask(__name__)
 
+def is_mobile(request):
+    user_agent = request.headers.get('User-Agent').lower()
+    return "mobile" in user_agent or "android" in user_agent or "iphone" in user_agent
+
 @app.route('/')
-def home():
-    return render_template('index.html')
+def index():
+    if is_mobile(request):
+        return render_template('mobile.html')
+    else:
+        return render_template('desktop.html')
 
 
 @app.route('/send_email', methods=['POST'])
