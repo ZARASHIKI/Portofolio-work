@@ -436,7 +436,7 @@ body{
 transition: background-color 1.2s ease;
 }
 
-@media only screen and (min-height:50rem) {
+@media only screen and (min-height:50rem) and (min-height:31.25rem){
   .visi{
     padding-top: 6rem;
     height: 44vh;
@@ -444,26 +444,26 @@ transition: background-color 1.2s ease;
   .testi{
     height: 75vh;
   }
-  .dekorm1{
+  .m1{
     position: absolute;
     z-index: 10;
     right: 0;
     top: 9rem;
   }
-  .dekorm2{
+  .m2{
     position: absolute;
     z-index: 10;
     left: 0;
     top: 63rem;
   }
-  .dekorm3{
+  .m3{
     height: 20%;
     position: absolute;
     z-index: 10;
     left: 0;
     top: 198rem;
   }
-  .dekorm4{
+  .m4{
     width: 60%;
     position: absolute;
     z-index: 10;
@@ -471,7 +471,7 @@ transition: background-color 1.2s ease;
     top: 242rem;
   }
 }
-@media only screen and (max-height:50rem) {
+@media only screen and (max-height:50rem) and (max-height:31.25rem) {
   .visi{
     height: 70vh;
     padding-top: 8rem;
@@ -479,25 +479,25 @@ transition: background-color 1.2s ease;
   .testi{
     height: 110vh;
   }
-  .dekorm1{
+  .m1{
     position: absolute;
     z-index: 10;
     right: 0;
     top: 9rem;
   }
-  .dekorm2{
+  .m2{
     position: absolute;
     z-index: 10;
     left: 0;
     top: 44rem;
   }
-  .dekorm3{
+  .m3{
     position: absolute;
     z-index: 10;
     left: 0;
     top: 162rem;
   }
-  .dekorm4{
+  .m4{
     width: 60%;
     position: absolute;
     z-index: 10;
