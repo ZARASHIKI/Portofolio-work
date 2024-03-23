@@ -427,10 +427,81 @@ body{
 }
 .my-slide2{
   display: none;
+
 }
 .my-slide3{
   display: none;
 }
 .dot{
 transition: background-color 1.2s ease;
+}
+
+@media only screen and (min-height:800px) {
+  .visi{
+    padding-top: 6rem;
+    height: 44vh;
+  }
+  .testi{
+    height: 75vh;
+  }
+  .dekorm1{
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    top: 9rem;
+  }
+  .dekorm2{
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 63rem;
+  }
+  .dekorm3{
+    height: 20%;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 198rem;
+  }
+  .dekorm4{
+    width: 60%;
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    top: 242rem;
+  }
+}
+@media only screen and (max-height:800px) {
+  .visi{
+    height: 70vh;
+    padding-top: 8rem;
+  }
+  .testi{
+    height: 110vh;
+  }
+  .dekorm1{
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    top: 9rem;
+  }
+  .dekorm2{
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 44rem;
+  }
+  .dekorm3{
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 162rem;
+  }
+  .dekorm4{
+    width: 60%;
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    top: 205rem;
+  }
 }

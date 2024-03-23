@@ -124,8 +124,11 @@ $(document).ready(function () {
 
 tailwind.config = {
     theme: {
-
+        
         extend: {
+            screen:{
+                'tall': { 'raw': '(min-height: 800px)' },
+            },
             colors: {
                 'boxform': '#0A619F',
                 'cardhover': '#25282D',
