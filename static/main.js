@@ -124,10 +124,9 @@ $(document).ready(function () {
 
 tailwind.config = {
     theme: {
-        
         extend: {
-            screen:{
-                'tall': { 'raw': '(min-height: 800px)' },
+            screens: {
+                'mo': '400px' // Define custom screen size named 'mo' with a minimum width of 400px
             },
             colors: {
                 'boxform': '#0A619F',

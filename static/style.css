@@ -436,7 +436,7 @@ body{
 transition: background-color 1.2s ease;
 }
 
-@media only screen and (max-height: 5000px) and (max-width:2000px) {
+/* @media only screen and (max-height: 5000px) and (max-width:2000px) {
   .visi {
     padding-top: 6rem;
     height: 44vh;
@@ -505,4 +505,4 @@ transition: background-color 1.2s ease;
     right: 0;
     top: 205rem;
   }
-}
+} */
