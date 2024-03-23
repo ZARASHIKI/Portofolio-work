@@ -471,7 +471,7 @@ transition: background-color 1.2s ease;
     top: 242rem;
   }
 }
-@media only screen and (min-height:100px) and (max-height:800px){
+@media only screen and (min-height:100px) and (max-height:799px){
   .visi{
     height: 70vh;
     padding-top: 8rem;
