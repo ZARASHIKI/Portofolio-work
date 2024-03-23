@@ -4,16 +4,9 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 app = Flask(__name__)
 
-def is_mobile(request):
-    user_agent = request.headers.get('User-Agent').lower()
-    return "mobile" in user_agent or "android" in user_agent or "iphone" in user_agent
-
 @app.route('/')
-def index():
-    if is_mobile(request):
-        return render_template('mobile.html')
-    else:
-        return render_template('desktop.html')
+def home():
+    return render_template('index.html')
 
 
 @app.route('/send_email', methods=['POST'])
@@ -33,8 +26,7 @@ def send_email():
     msg['To'] = sender_email
     msg['Subject'] = subject
     
-    body = "Name: {} {}\nEmail: {}\nMessage:\n{}".format(name, name2, email, message)
-
+    body = f"Name: {name} {name2}\nEmail: {email}\nMessage:\n{message}"
     msg.attach(MIMEText(body, 'plain'))
     
     with smtplib.SMTP('smtp.gmail.com', 587) as server:
