@@ -4,6 +4,8 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 app = Flask(__name__)
 
+
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -26,7 +28,8 @@ def send_email():
     msg['To'] = sender_email
     msg['Subject'] = subject
     
-    body = f"Name: {name} {name2}\nEmail: {email}\nMessage:\n{message}"
+    body = "Name: {} {}\nEmail: {}\nMessage:\n{}".format(name, name2, email, message)
+
     msg.attach(MIMEText(body, 'plain'))
     
     with smtplib.SMTP('smtp.gmail.com', 587) as server:
