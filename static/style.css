@@ -436,34 +436,34 @@ body{
 transition: background-color 1.2s ease;
 }
 
-@media only screen and (min-height:800px) {
-  .visi{
+@media only screen and (min-height: 800px) and (max-width: 1000px) {
+  .visi {
     padding-top: 6rem;
     height: 44vh;
   }
-  .testi{
+  .testi {
     height: 75vh;
   }
-  .m1{
+  .m1 {
     position: absolute;
     z-index: 10;
     right: 0;
     top: 9rem;
   }
-  .m2{
+  .m2 {
     position: absolute;
     z-index: 10;
     left: 0;
     top: 63rem;
   }
-  .m3{
+  .m3 {
     height: 20%;
     position: absolute;
     z-index: 10;
     left: 0;
     top: 198rem;
   }
-  .m4{
+  .m4 {
     width: 60%;
     position: absolute;
     z-index: 10;
@@ -471,33 +471,34 @@ transition: background-color 1.2s ease;
     top: 242rem;
   }
 }
-@media only screen and (max-height:799px){
-  .visi{
+
+@media only screen and (max-height: 799px) and (max-width: 1000px) {
+  .visi {
     height: 70vh;
     padding-top: 8rem;
   }
-  .testi{
+  .testi {
     height: 110vh;
   }
-  .m1{
+  .m1 {
     position: absolute;
     z-index: 10;
     right: 0;
     top: 9rem;
   }
-  .m2{
+  .m2 {
     position: absolute;
     z-index: 10;
     left: 0;
     top: 44rem;
   }
-  .m3{
+  .m3 {
     position: absolute;
     z-index: 10;
     left: 0;
     top: 162rem;
   }
-  .m4{
+  .m4 {
     width: 60%;
     position: absolute;
     z-index: 10;
