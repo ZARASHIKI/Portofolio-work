@@ -20,32 +20,56 @@ function send_email() {
     let submitButtonm = $('#submitm');
     let loadingButtonm = $('#loadingm');
 
-    submitButton.addClass('hidden');
-    loadingButton.removeClass('hidden');
-    submitButtonm.addClass('hidden');
-    loadingButtonm.removeClass('hidden');
+
     let fname = $('#first_name').val();
     let lname = $('#last_name').val();
     let email = $('#email').val();
     let message = $('#message').val();
-    $.ajax({
-        type: "POST",
-        url: "/send_email",
-        data: {
-            fname: fname,
-            lname: lname,
-            email: email,
-            message: message,
-        },
-        success: function (response) {
-            submitButton.removeClass('hidden');
-            loadingButton.addClass('hidden');
-            submitButtonm.removeClass('hidden');
-            loadingButtonm.addClass('hidden');
-            alert("Thank you for your message. We will get back to you soon!")
-            window.location.replace("/")
-        },
-    });
+
+    if (fname.trim() === '' || lname.trim() === '' || email.trim() === '' || message.trim() === '') {
+        if (fname === '') {
+            $('#first_name').css('border-color', 'red');
+        }
+        if (lname === '') {
+            $('#last_name').css('border-color', 'red');
+        }
+
+        if (email === '') {
+            $('#email').css('border-color', 'red');
+        }
+
+        if (message === '') {
+            $('#message').css({
+                'border-color': 'red',
+                'border-width': '2px',  
+                'outline': 'none'       
+            });
+        }
+    } else {
+        submitButton.addClass('hidden');
+        loadingButton.removeClass('hidden');
+        submitButtonm.addClass('hidden');
+        loadingButtonm.removeClass('hidden');
+        $.ajax({
+            type: "POST",
+            url: "/send_email",
+            data: {
+                fname: fname,
+                lname: lname,
+                email: email,
+                message: message,
+            },
+            success: function (response) {
+                submitButton.removeClass('hidden');
+                loadingButton.addClass('hidden');
+                submitButtonm.removeClass('hidden');
+                loadingButtonm.addClass('hidden');
+                alert("Thank you for your message. We will get back to you soon!")
+                window.location.replace("/")
+            },
+        });
+    }
+
 }
 $(document).ready(function () {
     $('.smth').click(function (event) {
@@ -142,7 +166,7 @@ tailwind.config = {
         extend: {
             screens: {
                 'mo': '430px',
-                'deko':'400px'
+                'deko': '400px'
             },
             colors: {
                 'boxform': '#0A619F',
@@ -150,11 +174,11 @@ tailwind.config = {
                 'skyy': '#0085FF',
                 'hover': '#27292F',
                 'all-bg': '#0F0F0F',
-                'bank':'#1B1D21',
+                'bank': '#1B1D21',
                 'white': '#D2D2D2',
                 'primary-red': 'var(--Primary-Red, #921616)',
                 'indicator': '#2A2A2A',
-                'menu':'#19191940'
+                'menu': '#19191940'
             },
             width: {
                 '40': '45rem',
@@ -169,5 +193,5 @@ tailwind.config = {
             }
         }
     }
-    
+
 }
