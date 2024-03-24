@@ -1,12 +1,19 @@
-from flask import Flask,render_template,request,jsonify
+from flask import Flask, make_response,render_template,request,jsonify
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 app = Flask(__name__)
 
+@app.after_request
+def add_header(response):
+    response.headers['Cache-Control'] = 'no-store'
+    return response
+
 @app.route('/')
 def home():
-    return render_template('index.html')
+    response = make_response(render_template('index.html'))
+    response.headers['Cache-Control'] = 'no-store'
+    return response
 
 
 @app.route('/send_email', methods=['POST'])
