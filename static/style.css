@@ -331,12 +331,24 @@ body {
   top: 80%;
   right: 10%;
 }
-
+.wam {
+  position: absolute;
+  top: 63%;
+  right: 10%;
+}
 .wa:hover .bg-whatappblk {
   opacity: 0;
 }
 
 .wa:hover .bg-whatappclr {
+  opacity: 1;
+}
+
+.wam:hover .bg-whatappblk {
+  opacity: 0;
+}
+
+.wam:hover .bg-whatappclr {
   opacity: 1;
 }
 
