@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/static/assets/favico.ico" type="image/x-icon" />
     <link href='{{ url_for("static", filename="style.css") }}' rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src='{{ url_for("static", filename="main.js") }}'></script>
@@ -85,7 +86,7 @@
             <a href="https://api.whatsapp.com/send/?phone=%2B6281211666999&text=Hi%2C+I+have+a+question...&type=phone_number&app_absent=0 "
                 target="_blank">
                 <div
-                    class="wa z-20 w-20 h-20 bg-zinc-900 rounded-full flex items-center justify-center shadow-custom-xl">
+                    class="wa z-20 w-20 h-20 bg-zinc-900 rounded-full flex items-center justify-center shadow-custom-xl fixed">
                     <div class="bg-whatappblk w-11 h-11"></div>
                     <div class="bg-whatappclr w-11 h-11"></div>
                 </div>
@@ -207,12 +208,12 @@
 
                 </div>
                 <div class="relative left-[15rem]">
-                    <div class="grid grid-cols-5 gap-4 h-[45rem] border-2 border-black rounded-lg">
+                    <div class="grid grid-cols-5 gap-4 h-[45rem] border-3 border-black rounded-lg">
                         <div class="relative col-span-1">
                             <img src="/static/assets/Foto 1 .jpg" alt="Left Image"
                                 class="absolute inset-0 w-full h-full rounded-lg object-cover">
                         </div>
-                        <div class="relative col-span-2 w-[38rem]">
+                        <div class="relative col-span-2 w-full">
                             <img src="/static/assets/Foto 4.jpg" alt="Top Left Image"
                                 class="absolute w-[18rem] h-[22rem] rounded-lg">
                             <img src="/static/assets/Foto 3 .jpg" alt="Top Right Image"
@@ -222,7 +223,7 @@
                         </div>
                         <div class="relative col-span-1">
                             <img src="/static/assets/Foto 5 .jpg" alt="Right Image"
-                                class="absolute inset-0 w-full h-full ml-[-5.5rem] rounded-lg object-cover">
+                                class="absolute w-full h-full rounded-lg object-cover">
                         </div>
                     </div>
                 </div>
@@ -465,17 +466,22 @@
     </div>
 
     <div class="overflow-hidden block lg:hidden">
-        <img class=" absolute z-0 right-0 top-[9rem] deko:right-0 deko:top-[9rem]" src="/static/assets/Group 5m.svg" alt="">
-        <img class="absolute z-0 left-0 top-[44rem] deko:left-0 deko:top-[63rem]" src="/static/assets/Group 6m.svg" alt="">
+        <img class=" absolute z-0 right-0 top-[9rem] deko:right-0 deko:top-[9rem]" src="/static/assets/Group 5m.svg"
+            alt="">
+        <img class="absolute z-0 left-0 top-[44rem] deko:left-0 deko:top-[63rem]" src="/static/assets/Group 6m.svg"
+            alt="">
         <img class="m3 absolute z-0 left-0 top-[162rem] deko:left-0 deko:top-[198rem]" src="/static/assets/Group 6m.svg"
             alt="">
-        <img class="absolute w-[60%] z-0 right-0 top-[205rem] deko:right-0 deko:top-[242rem]" src="/static/assets/Group 10m.svg"
+        <img class="absolute w-[60%] z-0 right-0 top-[205rem] deko:right-0 deko:top-[242rem]"
+            src="/static/assets/Group 10m.svg" alt="">
+        <img class=" absolute z-0 right-0 top-[9rem] deko:right-0 deko:top-[9rem]" src="/static/assets/blurm1.png"
             alt="">
-        <!-- <img class=" absolute z-0 right-0 top-[9rem] deko:right-0 deko:top-[9rem]" src="/static/assets/blurm1.png" alt="">
-        <img class="absolute z-0 left-0 top-[44rem] deko:left-0 deko:top-[63rem]" src="/static/assets/blurm2.png" alt="">
-        <img class=" absolute z-0 left-0 top-[162rem] deko:left-0 deko:top-[170rem]" src="/static/assets/blurm3.png" alt="">
+        <img class="absolute z-0 left-0 top-[44rem] deko:left-0 deko:top-[63rem]" src="/static/assets/blurm2.png"
+            alt="">
+        <img class=" absolute z-0 left-0 top-[162rem] deko:left-0 deko:top-[170rem]" src="/static/assets/blurm3.png"
+            alt="">
         <img class=" absolute z-0 right-0 top-[205rem] deko:right-0 deko:top-[180rem]" src="/static/assets/blurm4.png"
-            alt=""> -->
+            alt="">
 
 
         <div class="flex justify-center">
@@ -723,8 +729,7 @@
 
         </section>
 
-        <section id="visionm"
-            class="bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg visi">
+        <section id="visionm" class="bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg visi">
             <div class="parallax-content relative z-0 text-white servicem text-center ">
                 <h1 class=" text-[1.5625rem] font-bold">OUR VISION & MISSION</h1>
                 <img class="mt-4 ml-[20%]" src="/static/assets/Line 1.svg" alt="">
@@ -887,11 +892,11 @@
                 </div>
         </section>
         <section id="bankm" class="h-full bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
-            <div
-                class="parallax-content relative z-0 flex flex-col items-center justify-center text-white servicem">
+            <div class="parallax-content relative z-0 flex flex-col items-center justify-center text-white servicem">
                 <h1 class="mt-6 text-[1.563rem] font-bold">BANK <br> PARTNERSHIP</h1>
                 <img class="mt-2" src="/static/assets/Line 1.svg" alt="">
-                <div class="h-auto mt-8 bg-cover bg-fixed bg-center bg-no-repeat bg-bank flex items-center justify-center px-auto">
+                <div
+                    class="h-auto mt-8 bg-cover bg-fixed bg-center bg-no-repeat bg-bank flex items-center justify-center px-auto">
                     <img class="bank1" src="/static/assets/bsi.png" alt="">
                     <img class="bank1" src="/static/assets/bukopin.png" alt="">
                     <img class="bank1" src="/static/assets/raya.png" alt="">
@@ -901,7 +906,8 @@
             </div>
         </section>
 
-        <section id="kontakm" class="pt h-[100%] overflow-y-hidden bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
+        <section id="kontakm"
+            class="pt h-[100%] z-10 overflow-y-hidden bg-cover bg-fixed bg-center bg-no-repeat bg-all-bg">
             <div class="w-[90%]  mx-auto ">
                 <div class="kontakm overflow-y-block">
                     <div
