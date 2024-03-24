@@ -225,7 +225,7 @@ footer {
 }
 
 .pt {
-  padding-top: 2rem;
+  padding-top: 6rem;
 }
 
 .dekor2 {
@@ -519,4 +519,9 @@ body {
   .testi {
     height: 110vh;
   }
+}
+.bank{
+  width: 6rem;
+  height: auto;
+  padding: 0.5rem;
 }

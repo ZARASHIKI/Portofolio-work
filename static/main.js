@@ -144,6 +144,7 @@ tailwind.config = {
                 'skyy': '#0085FF',
                 'hover': '#27292F',
                 'all-bg': '#0F0F0F',
+                'bank':'#1B1D21',
                 'white': '#D2D2D2',
                 'primary-red': 'var(--Primary-Red, #921616)',
                 'indicator': '#2A2A2A',
