@@ -104,61 +104,7 @@ $(document).ready(function () {
     // Check visibility on page load
     $(window).scroll();
 });
-$(document).ready(function () {
-    let slideIndex = 0;
-    let slideIndex2 = 0;
-    let slideIndex3 = 0;
-    let slides = document.getElementsByClassName("my-slide");
-    let slides2 = document.getElementsByClassName("my-slide2");
-    let slides3 = document.getElementsByClassName("my-slide3");
-    let dots = document.getElementsByClassName("dot");
-    let dots2 = document.getElementsByClassName("dot2");
-    let dots3 = document.getElementsByClassName("dot3");
 
-    // Automatic slideshow
-    showSlides();
-    showSlides2();
-    showSlides3();
-
-    function showSlides() {
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-            dots[i].classList.remove("bg-white");
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1; }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].classList.add("bg-white");
-        setTimeout(showSlides, 5000);
-
-    }
-
-    function showSlides2() {
-        for (let i = 0; i < slides2.length; i++) {
-            slides2[i].style.display = "none";
-            dots2[i].classList.remove("bg-white");
-        }
-        slideIndex2++;
-        if (slideIndex2 > slides2.length) { slideIndex2 = 1; }
-        slides2[slideIndex2 - 1].style.display = "block";
-        dots2[slideIndex2 - 1].classList.add("bg-white");
-        setTimeout(showSlides2, 5000);
-
-    }
-
-    function showSlides3() {
-        for (let i = 0; i < slides3.length; i++) {
-            slides3[i].style.display = "none";
-            dots3[i].classList.remove("bg-white");
-        }
-        slideIndex3++;
-        if (slideIndex3 > slides3.length) { slideIndex3 = 1; }
-        slides3[slideIndex3 - 1].style.display = "block";
-        dots3[slideIndex3 - 1].classList.add("bg-white");
-        setTimeout(showSlides3, 5000);
-
-    }
-});
 
 
 tailwind.config = {

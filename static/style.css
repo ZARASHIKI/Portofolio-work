@@ -492,8 +492,35 @@ body {
   }
 }
 
-.my-slide2 {
-  display: none;
+.custom-indicator {
+  /* Add your custom styles here */
+  margin-bottom: -3rem; /* Example: Adjust bottom margin */
+}
+
+/* Custom styling for individual carousel indicators */
+.custom-indicator .new {
+  /* Add your custom styles here */
+  width:  0.5rem; /* Example: Set width */
+  height: 0.5rem; /* Example: Set height */
+  background-color: #2A2A2A; /* Example: Set background color */
+  border: none; /* Example: Remove border */
+  border-radius: 100%; /* Example: Make it round */
+  cursor: pointer; /* Example: Add cursor pointer */
+  margin-right: 5px; /* Example: Add margin */
+}
+
+/* Custom styling for active carousel indicator */
+.custom-indicator .new.active {
+  /* Add your custom styles here */
+  background-color: #fff; /* Example: Set active background color */
+}
+
+.swipe{
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 24px;
+}
+.swipe .my-slide2{
+  scroll-snap-align: start;
 
 }
 
