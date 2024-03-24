@@ -17,9 +17,13 @@ function toggleMenu() {
 function send_email() {
     let submitButton = $('#submit');
     let loadingButton = $('#loading');
+    let submitButtonm = $('#submitm');
+    let loadingButtonm = $('#loadingm');
 
     submitButton.addClass('hidden');
     loadingButton.removeClass('hidden');
+    submitButtonm.addClass('hidden');
+    loadingButtonm.removeClass('hidden');
     let fname = $('#first_name').val();
     let lname = $('#last_name').val();
     let email = $('#email').val();
@@ -36,6 +40,8 @@ function send_email() {
         success: function (response) {
             submitButton.removeClass('hidden');
             loadingButton.addClass('hidden');
+            submitButtonm.removeClass('hidden');
+            loadingButtonm.addClass('hidden');
             alert("Thank you for your message. We will get back to you soon!")
             window.location.replace("/")
         },

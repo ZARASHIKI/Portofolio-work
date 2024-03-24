@@ -940,7 +940,7 @@
                     <div class="w-full mt-8 z-10 formm">
                         <h1 class="font-bold mb-4 text-white">Get a personal consultation</h1>
                         <img class="mt-2 ml-auto mr-auto" src="/static/assets/Line 1.svg" alt="">
-                        <div class="w-[80%] mx-auto mt-4">
+                        <div class="relative w-[80%] mx-auto mt-4 z-30">
                             <div>
                                 <label for="first_name" class="block text-white">First Name *</label>
                                 <input type="text" id="first_name" name="first_name"
@@ -965,12 +965,12 @@
                                     class="form-textarea mt-1 mb-5 block  border-gray-300 shadow-md bg-white"
                                     style="width: 100%;" required></textarea>
                             </div>
-                            <button id="submit" type="button"
-                                class="rounded-full text-white mt-2 px-4 py-2 bg-primary-red transition duration-500"
+                            <button id="submitm" type="button"
+                                class="relative rounded-full text-white mt-2 px-4 py-2 bg-primary-red transition duration-500 z-30"
                                 style="width: 100%;box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.25), 3px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
                         " onclick="send_email()">Submit</button>
-                            <button id="loading" type="button"
-                                class="hidden inline-flex items-center mt-2 justify-center px-4 py-2 font-semibold leading-6 text-sm shadow-md rounded-md text-white bg-primary-red hover:bg-primary-red transition ease-in-out duration-150 cursor-not-allowed"
+                            <button id="loadingm" type="button"
+                                class="hidden relative z-30 inline-flex items-center mt-2 justify-center px-4 py-2 font-semibold leading-6 text-sm shadow-md rounded-md text-white bg-primary-red hover:bg-primary-red transition ease-in-out duration-150 cursor-not-allowed"
                                 disabled style="width: 100%;box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.25), 3px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
                         ">
                                 <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" viewBox="0 0 24 24"
