@@ -331,11 +331,7 @@ body {
   top: 80%;
   right: 10%;
 }
-.wam {
-  position: absolute;
-  top: 80%;
-  right: 10%;
-}
+
 .wa:hover .bg-whatappblk {
   opacity: 0;
 }
@@ -519,6 +515,11 @@ body {
   .testi {
     height: 75vh;
   }
+  .wam {
+    position: absolute;
+    top: 85%;
+    right: 10%;
+  }
 }
 
 @media screen and (min-width: 100px) and (max-height: 799px) {
@@ -530,6 +531,11 @@ body {
 
   .testi {
     height: 110vh;
+  }
+  .wam {
+    position: absolute;
+    top: 80%;
+    right: 10%;
   }
 }
 .bank1{
