@@ -1,10 +1,19 @@
 function toggleMenu() {
-    var closedIcon = document.getElementById('nav-icon1');
-    closedIcon.classList.toggle('open');
     var mobileMenu = document.getElementById('mobile-menu');
+    var closedIcon = document.getElementById('nav-icon1');
+
     mobileMenu.classList.toggle('hidden');
     mobileMenu.classList.toggle('open');
+    closedIcon.classList.toggle('open');
+
+    // Menambah atau menghapus pseudo-element ::before saat menu dibuka atau ditutup
+    if (mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.add('before-mobile-menu');
+    } else {
+        mobileMenu.classList.remove('before-mobile-menu');
+    }
 }
+
 function send_email() {
     let submitButton = $('#submit');
     let loadingButton = $('#loading');
@@ -126,7 +135,8 @@ tailwind.config = {
     theme: {
         extend: {
             screens: {
-                'mo': '400px' // Define custom screen size named 'mo' with a minimum width of 400px
+                'mo': '430px',
+                'deko':'400px'
             },
             colors: {
                 'boxform': '#0A619F',
@@ -137,6 +147,7 @@ tailwind.config = {
                 'white': '#D2D2D2',
                 'primary-red': 'var(--Primary-Red, #921616)',
                 'indicator': '#2A2A2A',
+                'menu':'#19191940'
             },
             width: {
                 '40': '45rem',
@@ -151,4 +162,5 @@ tailwind.config = {
             }
         }
     }
+    
 }

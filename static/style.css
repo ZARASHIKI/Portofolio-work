@@ -44,9 +44,11 @@
 }
 
 #nav-icon1 span:nth-child(2) {
-   width: 20px; /* Decrease width */
+  width: 20px;
+  /* Decrease width */
   top: 20px;
-  left: 13%; /* Adjust left position */
+  left: 13%;
+  /* Adjust left position */
 
 }
 
@@ -82,9 +84,17 @@
   height: 100%;
   background-color: #1B1D21;
   transition: right 2.5s ease;
-  z-index: 10;
 }
-
+.before-mobile-menu::before {
+  content: ""; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color:  rgba(25, 25, 25, 0.25);; 
+  z-index: -1; 
+}
 #mobile-menu.open {
   right: 0;
 }
@@ -143,7 +153,7 @@
 .service h1 {
   color: var(--Primary-Red, #921616);
   text-align: center;
-  font-family:"Lexend Tera";
+  font-family: "Lexend Tera";
   font-size: 32px;
   font-style: normal;
   font-weight: 1000;
@@ -171,9 +181,10 @@
   line-height: normal;
   text-transform: uppercase;
 }
+
 .formm h1 {
   color: var(--Text-1, #D2D2D2);
-  text-align: center; 
+  text-align: center;
   font-family: "Lexend Tera";
   font-size: 25px;
   font-style: normal;
@@ -181,28 +192,31 @@
   line-height: normal;
   text-transform: uppercase;
 }
+
 .kontak {
   width: 70%;
   height: 90vh;
   border-radius: 8px;
-  background-image: 
-      linear-gradient(95deg, rgba(20, 4, 4, 0.9) 0.55%, rgba(0, 0, 0, 0.7) 98.92%),
-      url('/static/assets/texture.jpeg');
+  background-image:
+    linear-gradient(95deg, rgba(20, 4, 4, 0.9) 0.55%, rgba(0, 0, 0, 0.7) 98.92%),
+    url('/static/assets/texture.jpeg');
   background-color: lightgray;
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.kontakm{
-height: 980px;
-border-radius: 8px;
-border: 1px solid var(--Outline, #414751);
-background-image:linear-gradient(178deg, #251010 -11.68%, rgba(26, 26, 26, 0.00) 77.54%), url('/static/assets/texturem.png');
-background-color: lightgray;
-background-position: 50%;
-background-repeat: no-repeat;
-background-size: cover;
+
+.kontakm {
+  height: 980px;
+  border-radius: 8px;
+  border: 1px solid var(--Outline, #414751);
+  background-image: linear-gradient(178deg, #251010 -11.68%, rgba(26, 26, 26, 0.00) 77.54%), url('/static/assets/texturem.png');
+  background-color: lightgray;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 footer {
   display: flex;
   width: 100%;
@@ -213,65 +227,77 @@ footer {
 .pt {
   padding-top: 2rem;
 }
-.dekor2{
+
+.dekor2 {
   top: 419%;
   position: absolute;
   left: -12%;
 }
-.dekor{
+
+.dekor {
   z-index: -1;
   right: -10%;
   padding-top: 18.5rem;
   fill: linear-gradient(235deg, #727272 -16.13%, rgba(114, 114, 114, 0.00) 69.8%);
 }
-#services{
+
+#services {
   height: 120vh;
 }
-#about{
+
+#about {
   height: 140vh;
 }
 
-.ellipse1{
+.ellipse1 {
   left: -10%;
   top: 210%;
 }
-.ellipse2{
+
+.ellipse2 {
   width: 50%;
   top: 430%;
   left: 55%;
 }
-.ellipse3{
+
+.ellipse3 {
   top: 50%;
   right: -10%;
 }
-.ellipse4{
+
+.ellipse4 {
   width: 74%;
   height: 31%;
   top: -28%;
   left: -1%;
   transform: rotate(360deg);
 }
-.consul{
+
+.consul {
   margin-top: 3rem;
-  padding: 2% 2%; 
-  color: #f0f0f0; 
-  font-weight: normal; 
-  font-family: 'Work Sans', sans-serif; 
-  border-radius: 1.5rem; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  border: 1px solid #718096; 
+  padding: 2% 2%;
+  color: #f0f0f0;
+  font-weight: normal;
+  font-family: 'Work Sans', sans-serif;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #718096;
   width: 26%;
   transition: 0.5s ease;
 }
-.consul:hover{
+
+.consul:hover {
   background-color: #921616;
 }
-.h-screeen{
+
+.h-screeen {
   height: 85vh;
 }
-body{
+
+body {
   overflow-x: hidden;
 }
+
 .item {
   opacity: 0;
   transition: opacity 1.5s ease;
@@ -280,6 +306,7 @@ body{
 .visible {
   opacity: 1;
 }
+
 .form-input {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
@@ -287,17 +314,18 @@ body{
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
-  border: 2px solid #ccc; 
+  border: 2px solid #ccc;
   transition: border-color 0.3s ease;
 }
 
 .form-input:hover {
-  border-color: #0A619F; 
+  border-color: #0A619F;
 }
 
 .form-input:focus {
   border-color: #0A619F;
 }
+
 .wa {
   position: absolute;
   top: 87%;
@@ -359,38 +387,50 @@ body{
   line-height: 22px;
   /* 137.5% */
 }
-.chekm{
-  top:17.3rem;
+
+.chekm {
+  top: 17.3rem;
 }
-.my-slide{
+
+.my-slide {
   display: none;
 }
 
 .fade {
   animation-name: slideInOut;
-  animation-duration: 6s; /* Total duration including pause */
+  animation-duration: 6s;
+  /* Total duration including pause */
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
-  opacity: 0; /* Start with opacity 0 */
+  opacity: 0;
+  /* Start with opacity 0 */
 }
 
 @keyframes slideInOut {
-  0%, 20% { 
+
+  0%,
+  20% {
     transform: translateX(100%);
-    opacity: 0; 
+    opacity: 0;
   }
-  25%, 45% { 
+
+  25%,
+  45% {
     transform: translateX(0%);
-    opacity: 1; 
+    opacity: 1;
   }
-  50%, 70% { 
+
+  50%,
+  70% {
     transform: translateX(0%);
-    opacity: 1; 
+    opacity: 1;
   }
-  75%, 100% { 
+
+  75%,
+  100% {
     transform: translateX(-100%);
-    opacity: 0; 
+    opacity: 0;
   }
 }
 
@@ -400,38 +440,83 @@ body{
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
-  opacity: 0; /* Mulai dengan opasitas 0 */
+  opacity: 0;
+  /* Mulai dengan opasitas 0 */
 }
 
 @keyframes slideInOut2 {
-  0%, 8.333% { /* Start moving immediately, reach the midpoint quickly */
+
+  0%,
+  8.333% {
+    /* Start moving immediately, reach the midpoint quickly */
     transform: translateX(100%);
-    opacity: 0; /* Opacity 0 saat animasi dimulai */
+    opacity: 0;
+    /* Opacity 0 saat animasi dimulai */
   }
-  16.666% { /* End of initial movement, start of pause */
+
+  16.666% {
+    /* End of initial movement, start of pause */
     transform: translateX(0%);
-    opacity: 1; /* Opacity 1 saat slide mulai terlihat */
+    opacity: 1;
+    /* Opacity 1 saat slide mulai terlihat */
   }
-  50% { /* Pause */
+
+  50% {
+    /* Pause */
     transform: translateX(0%);
-    opacity: 1; /* Tetap pada opasitas 1 selama berhenti */
+    opacity: 1;
+    /* Tetap pada opasitas 1 selama berhenti */
   }
-  66.666% { /* Resume movement */
+
+  66.666% {
+    /* Resume movement */
     transform: translateX(0%);
-    opacity: 1; /* Tetap pada opasitas 1 saat animasi berlanjut */
+    opacity: 1;
+    /* Tetap pada opasitas 1 saat animasi berlanjut */
   }
-  83.333%, 100% { /* Move to the left */
+
+  83.333%,
+  100% {
+    /* Move to the left */
     transform: translateX(-100%);
-    opacity: 0; /* Tetap pada opasitas 1 saat animasi selesai */
+    opacity: 0;
+    /* Tetap pada opasitas 1 saat animasi selesai */
   }
 }
-.my-slide2{
+
+.my-slide2 {
   display: none;
 
 }
-.my-slide3{
+
+.my-slide3 {
   display: none;
 }
-.dot{
-transition: background-color 1.2s ease;
+
+.dot {
+  transition: background-color 1.2s ease;
+}
+
+@media screen and (min-width: 100px) and (min-height: 800px) {
+
+  .visi {
+    height: 44vh;
+    padding-top: 6rem;
+  }
+
+  .testi {
+    height: 75vh;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-height: 799px) {
+
+  .visi {
+    height: 70vh;
+    padding-top: 8rem;
+  }
+
+  .testi {
+    height: 110vh;
+  }
 }
