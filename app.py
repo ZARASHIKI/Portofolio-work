@@ -22,8 +22,9 @@ def send_email():
     name2 = request.form['lname']
     email = request.form['email']
     message = request.form['message']
-        
-    sender_email = "agusyusup69@gmail.com"
+    # Email Penerima
+    sender_email = "example@gmail.com"
+    # Password email untuk Aplikasi
     password = "qsit jepf axjg skie "
     
     subject = "New Message from Contact Form"
